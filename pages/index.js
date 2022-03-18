@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <motion.div className="">
       <Head>
-        <title>Next site - Business Page Template</title>
+        <title>Delta Theme - Business Page Template</title>
         <meta name="description" content="Business page landing page template" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

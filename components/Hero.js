@@ -2,16 +2,16 @@ import heroImg from "../public/images/hero.png"
 import Image from "next/image"
 export default function  Home(){
     return(
-        <div className="xl:container mx-auto px-6 md:px-9 lg:flex justify-between py-12 gap-x-20 items-center lg:text-left  text-center mt-12 md:mt-0">
+        <div className="xl:container mx-auto px-6 md:px-9 lg:flex justify-between py-12 md:gap-x-24 items-center lg:text-left  text-center mt-12 md:mt-0">
             <div className="max-w-2xl  mx-auto lg:mx-0 lg:1/2 mb-14 lg:mb-2">
-                <h1 className="lg:text-4xl font-bold text-3xl">Free Landing Page Template for startups</h1>
-                <p className="mt-5 text-l">Nextly is a free landing page & marketing website template for startups and indie projects. Its built with Next.js & TailwindCSS. And its completely open-source.</p>
+                <h1 className="lg:text-5xl font-bold text-3xl">Free Landing Page Template for startups</h1>
+                <p className="mt-5 text-l max-w-2xl">Nextly is a free landing page & marketing website template for startups and indie projects. Its built with Next.js & TailwindCSS. And its completely open-source.</p>
                 <div className="flex flex-col space-y-3 sm:space-x-4 sm:space-y-0 lg:flex-row mt-5 items-center ">
                     <a
                         href="https://web3templates.com/templates/nextly-landing-page-template-for-startups"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md mb-4">
+                        className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md mb-5 sm:mb-0">
                         Download for Free
                     </a>
                     <a
