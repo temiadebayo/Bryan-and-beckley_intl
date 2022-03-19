@@ -5,7 +5,7 @@ import React from 'react'
 export default function Article({benefit, imgleft}){
     console.log(benefit)
     return (
-        <div className="xl:container xl:mx-auto lg:flex px-9 justify-between gap-12 mt-9 items-center text-center">
+        <div className="xl:container xl:mx-auto lg:flex px-9 justify-between gap-12 mt-9 items-center text-center p-9">
             <div className={`lg:w-1/2 ${ imgleft=== "true" ? 'order-last' : "" }`}>
                 <Image
                     src={benefit.image}
@@ -23,7 +23,7 @@ export default function Article({benefit, imgleft}){
             <div>
                 <div>
                     {benefit && benefit.bullets.map((bullet, index)=>(
-                        <div className="flex items-start mt-8 space-x-3">
+                        <div key={index} className="flex items-start mt-8 space-x-3">
                             <div className="flex items-center justify-center flex-shrink-0 mt-1 bg-indigo-500 rounded-md w-11 h-11 ">
                                 {React.cloneElement(bullet.icon, {
                                     className: "w-7 h-7 text-indigo-50",
