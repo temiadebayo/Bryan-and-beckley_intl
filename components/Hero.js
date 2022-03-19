@@ -18,10 +18,17 @@ export default function  Home(){
               }
           }
     }
+    const stagger = {
+        animate: {
+            transition: {
+                staggerChildren: 0.1,
+            }
+        }
+    }
 
     return(
-        <motion.div initial="initial" animate="animate" variants={fadeInUp}>
-            <div className="xl:container mx-auto px-6 md:px-9 lg:flex justify-between py-12 md:gap-x-24 items-center lg:text-left  text-center mt-12 md:mt-0">
+        <motion.div initial="initial" animate="animate" variants={stagger}>
+            <motion.div variants={fadeInUp} className="xl:container mx-auto px-6 md:px-9 lg:flex justify-between py-12 md:gap-x-24 items-center lg:text-left  text-center mt-12 md:mt-0">
                 <div className="max-w-2xl  mx-auto lg:mx-0 lg:1/2 mb-14 lg:mb-2">
                     <h1 className="lg:text-5xl font-bold text-3xl">Free Landing Page Template for startups</h1>
                     <p className="mt-5 max-w-2xl text-l">Nextly is a free landing page & marketing website template for startups and indie projects. Its built with Next.js & TailwindCSS. And its completely open-source.</p>
@@ -65,8 +72,8 @@ export default function  Home(){
                     placeholder="blur"
                     />
                 </div>
-            </div>
-            <div className="xl:container mx-auto p-8">
+            </motion.div>
+            <motion.div variants={fadeInUp} className="xl:container mx-auto p-8">
                 <div className="text-xl text-center text-gray-700 dark:text-white">
                     Trusted by <span className="text-indigo-600">2000+</span>{" "}
                     customers worldwide
@@ -88,14 +95,14 @@ export default function  Home(){
                 <SonyLogo />
                 </div>
             </div>
-            </div>
-            <div className="xl:container xl:mx-auto px-9 text-center p-8">
+            </motion.div>
+            <motion.div variants={fadeInUp} className="xl:container xl:mx-auto px-9 text-center p-8">
                 <div className="text-indigo-600 mb-4 font-bold">
                     NEXTLY BENEFITS
                 </div>
                 <h2 className="text-3xl font-bold lg:text-4xl mb-4">Why should you use this landing page</h2>
                 <p className="md:px-24 lg:px-[18rem] text-l">Nextly is a free landing page & marketing website template for startups and indie projects. Its built with Next.js & TailwindCSS. And its completely open-source.</p>
-            </div>
+            </motion.div>
         </motion.div>
     )
 
