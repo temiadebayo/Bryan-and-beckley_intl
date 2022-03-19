@@ -1,8 +1,26 @@
 import heroImg from "../public/images/hero.png"
 import Image from "next/image"
+import { motion } from "framer-motion"
 export default function  Home(){
+
+    const easing = [0.6, -0.5, 0.01, 0.99];
+    const fadeInUp= {
+          initial:{
+              y: 60,
+              opacity: 0
+          },
+          animate: {
+              y: 0,
+              opacity: 1,
+              transition: {
+                  duration: .5,
+                  ease: easing
+              }
+          }
+    }
+
     return(
-        <>
+        <motion.div initial="initial" animate="animate" variants={fadeInUp}>
             <div className="xl:container mx-auto px-6 md:px-9 lg:flex justify-between py-12 md:gap-x-24 items-center lg:text-left  text-center mt-12 md:mt-0">
                 <div className="max-w-2xl  mx-auto lg:mx-0 lg:1/2 mb-14 lg:mb-2">
                     <h1 className="lg:text-5xl font-bold text-3xl">Free Landing Page Template for startups</h1>
@@ -78,7 +96,7 @@ export default function  Home(){
                 <h2 className="text-3xl font-bold lg:text-4xl mb-4">Why should you use this landing page</h2>
                 <p className="md:px-24 lg:px-[18rem] text-l">Nextly is a free landing page & marketing website template for startups and indie projects. Its built with Next.js & TailwindCSS. And its completely open-source.</p>
             </div>
-        </>
+        </motion.div>
     )
 
 }
