@@ -40,8 +40,8 @@ export default function Article({benefit, imgleft}){
             <div className={`lg:w-1/2 ${ imgleft=== "true" ? 'order-last' : "" }`}>
                 <Image
                     src={benefit.image}
-                    width="521"
-                    height="482"
+                    width="800"
+                    height="900"
                     alt="Hero Illustration"
                     layout="intrinsic"
                     loading="eager"

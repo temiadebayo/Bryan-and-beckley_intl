@@ -37,221 +37,134 @@ export default function Home() {
   }, [controls, inView]);
 
   return (
-    <section>
-      <div className="h-40 md:h-55"></div>
-      <motion.div className="relative">
-        <div className="grid grid-cols-1 gap-4 md:gap-10 justify-items-center z-40 max-w-[1280px] mx-auto">
-          <h1 className=" text-center font-extrabold z-10 font-sans text-[80px] md:text-[200px] lg:text-[80px] ">
-            Your ticket to a <span className="block">show every night</span>
-          </h1>
-        </div>
-        <div className="relative w-full overflow-x-hidden  opacity-60 animate-[fade-in_.5s_1s_linear_forwards]">
-          {/* <div classN="absolute top-0 z-40 w-full h-55 bg-gradient-top"></div> */}
-          <video
-            playsInline={true}
-            autoPlay={true}
-            loop={true}
-            muted={true}
-            preload="auto"
-            src="/bg-video.mp4"
-            className="  h-screen relative w-full object-cover"
-          ></video>
-
-          <div classN="absolute bottom-0 z-30 w-full h-55 bg-gradient-bottom"></div>
-        </div>
-
-        <div className="h-0 pt-40 2xl:pt-55"></div>
-        {/* <div className="absolute top-0 h-full">
-        <svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 1440 600"
-          version="1.1"
-          preserveAspectRatio="none"
-        >
-          <defs>
-            <linearGradient
-              x1="0%"
-              y1="50%"
-              x2="97.8512666%"
-              y2="93.7294867%"
-              id="linearGradient-1"
-            >
-              <stop stopColor="#4D014F" offset="0%"></stop>
-              <stop stopColor="#4D014F" offset="100%"></stop>
-            </linearGradient>
-            <linearGradient
-              x1="0.994635712%"
-              y1="100%"
-              x2="28.0095779%"
-              y2="87.2474744%"
-              id="linearGradient-2"
-            >
-              <stop stopColor="#4D014F" offset="0%"></stop>
-              <stop stopColor="#4D014F" offset="100%"></stop>
-            </linearGradient>
-          </defs>
-          <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-            <g transform="translate(0.000000, -310.000000)">
-              <polygon
-                fill="#FFFFFF"
-                points="325 638 1440 835 0 835 0 737"
-              ></polygon>
-              <polygon
-                fill="url(#linearGradient-1)"
-                opacity="0.5"
-                points="1440 310 1440 835 325 638"
-              ></polygon>
-              <polygon
-                fill="url(#linearGradient-2)"
-                opacity="0.5"
-                points="0 575 325 638 0 737"
-              ></polygon>
-            </g>
-          </g>
-        </svg>
-      </div> */}
-        <motion.div
-          ref={ref}
-          animate={controls}
-          initial="animate"
-          variants={fadeInUp}
-          className="xl:container mx-auto px-4 md:px-9 lg:flex justify-between py-6 md:gap-x-24 absolute top-0 items-center lg:text-left  text-center mt-6 md:mt-0"
-        >
-          {/* <div className="max-w-2xl  mx-auto lg:mx-0 lg:1/2 mb-14 lg:mb-2">
-          <h1 className="lg:text-5xl font-bold text-3xl">
-            Free Landing Page Template for startups
-          </h1>
-          <p className="mt-5 max-w-2xl text-l">
-            Nextly is a free landing page & marketing website template for
-            startups and indie projects. Its built with Next.js & TailwindCSS.
-            And its completely open-source.
-          </p>
-          <div className="flex flex-col space-y-3 sm:space-x-4 sm:space-y-0 lg:flex-row mt-5 items-center ">
-            <a
-              href="https://web3templates.com/templates/nextly-landing-page-template-for-startups"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md mb-5 sm:mb-0"
-            >
-              Download for Free
-            </a>
-            <a
-              href="https://github.com/web3templates/nextly-template/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex text-center space-x-2 text-gray-500 dark:text-gray-400"
-            >
-              <svg
-                role="img"
-                width="24"
-                height="24"
-                className="w-5 h-5"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>GitHub</title>
-                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-              </svg>
-              <span> View on Github</span>
-            </a>
+    <motion.div className="relative">
+      <section className="relative  ">
+        <div className="w-full absolute z-50  "></div>
+        <video
+          playsInline={true}
+          autoPlay={true}
+          layout="intrinsic"
+          loop={true}
+          muted={true}
+          preload="auto"
+          src="/bg-video.mp4"
+          className=" relative bg-gradient-to-tr  object-contain"
+        ></video>
+        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 flex flex-col justify-center items-center ">
+          <div className="md:mb-[350px] mb-[40px] leading-5 block md:leading-[75px] ">
+            <p className="text-white/70 md:text-sm text-[10px] text-center ">
+              Meet Bryan & Beckley International Ltd All Access
+            </p>
+            <h1 className=" text-center font-bold text-[20px] md:text-[30px] lg:text-[65px]  text-white">
+              Your Innovative IT infrastructure &
+              <span className="block text-[#620D66] dark:text-[#e95df1]">
+                Digital Solutions
+              </span>
+            </h1>
           </div>
         </div>
+      </section>
 
-        <div className="lg:1/2 text-center">
-          <Image
-            src={heroImg}
-            width="616"
-            height="617"
-            alt="Hero Illustration"
-            layout="intrinsic"
-            loading="eager"
-            placeholder="blur"
-          />
-        </div> */}
-        </motion.div>
-        <motion.div
-          ref={ref}
-          animate={controls}
-          initial="initial"
-          variants={fadeInUp}
-          className="xl:container mx-auto p-8"
-        >
-          <div className="text-xl text-center text-gray-700 dark:text-white">
-            Trusted by <span className="text-indigo-600">2000+</span> customers
-            worldwide
+      <motion.div
+        ref={ref}
+        animate={controls}
+        initial="animate"
+        variants={fadeInUp}
+        className="xl:container mx-auto px-4 md:px-9 lg:flex justify-between  absolute top-0 items-center lg:text-left  text-center"
+      ></motion.div>
+      <motion.div
+        ref={ref}
+        animate={controls}
+        initial="initial"
+        variants={fadeInUp}
+        className="xl:container mx-auto p-8"
+      >
+        <div className="text-xl text-center text-gray-700 dark:text-white">
+          Trusted by{' '}
+          <span className="dark:text-[#eb7df0] text-[#620D66]">10+</span>{' '}
+          partners worldwide
+        </div>
+        <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around  max-w-l mx-auto">
+          <div className="pt-2 text-gray-400 dark:text-white">
+            <Image
+              src="/images/commscope_.svg"
+              alt="commScope logo"
+              width={150}
+              height={85}
+            />
           </div>
-          <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around  max-w-l mx-auto">
-            <div className="pt-2 text-gray-400 dark:text-gray-400">
-              <AmazonLogo />
-            </div>
-            <div className="text-gray-400 dark:text-gray-400">
-              <VerizonLogo />
-            </div>
-            <div className="text-gray-400 dark:text-gray-400">
-              <MicrosoftLogo />
-            </div>
-            <div className="pt-1 text-gray-400 dark:text-gray-400">
-              <NetflixLogo />
-            </div>
-            <div className="pt-2 text-gray-400 dark:text-gray-400">
-              <SonyLogo />
-            </div>
+          <div className="text-gray-400 dark:text-gray-400">
+            <Image
+              src="/images/rittal.svg"
+              alt="Rittal logo"
+              width={150}
+              height={85}
+            />
           </div>
-        </motion.div>
-        <motion.div
-          ref={ref}
-          animate={controls}
-          initial="initial"
-          variants={fadeInUp}
-          className="xl:container xl:mx-auto px-9 text-center p-8"
-        >
-          <div className="text-indigo-600 mb-4 font-bold">NEXTLY BENEFITS</div>
-          <h2 className="text-3xl font-bold lg:text-4xl mb-4">
-            Why should you use this landing page
-          </h2>
-          <p className="md:px-24 lg:px-[18rem] text-l">
-            Nextly is a free landing page & marketing website template for
-            startups and indie projects. Its built with Next.js & TailwindCSS.
-            And its completely open-source.
-          </p>
-        </motion.div>
+          <div className="text-gray-400 dark:text-gray-400">
+            <MicrosoftLogo />
+          </div>
+          <div className="pt-1 text-gray-400 dark:text-gray-400">
+            <NetflixLogo />
+          </div>
+          <div className="pt-2 text-gray-400 dark:text-gray-400">
+            <SonyLogo />
+          </div>
+        </div>
       </motion.div>
-    </section>
+      <motion.div
+        ref={ref}
+        animate={controls}
+        initial="initial"
+        variants={fadeInUp}
+        className="xl:container xl:mx-auto px-9 text-center p-8"
+      >
+        <div className="dark:text-[#eb7df0] mb-4 font-bold text-[#620D66]">
+          NEXTLY BENEFITS
+        </div>
+        <h2 className="text-3xl font-bold lg:text-4xl mb-4">
+          Why should you use this landing page
+        </h2>
+        <p className="md:px-24 lg:px-[18rem] text-l">
+          Nextly is a free landing page & marketing website template for
+          startups and indie projects. Its built with Next.js & TailwindCSS. And
+          its completely open-source.
+        </p>
+      </motion.div>
+    </motion.div>
   );
 }
 
-function AmazonLogo() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="110"
-      height="33"
-      fill="none"
-      viewBox="0 0 110 33"
-    >
-      <g fill="currentColor" clipPath="url(#clip0)">
-        <path
-          fillRule="evenodd"
-          d="M67.776 25.783c-6.323 4.676-15.521 7.167-23.455 7.167-11.114 0-21.079-4.1-28.667-10.923-.575-.536-.077-1.264.651-.843 8.163 4.752 18.243 7.589 28.668 7.589 7.013 0 14.755-1.457 21.884-4.485 1.073-.421 1.954.729.92 1.495z"
-          clipRule="evenodd"
-        ></path>
-        <path
-          fillRule="evenodd"
-          d="M70.42 22.756c-.804-1.035-5.365-.499-7.396-.23-.613.076-.728-.46-.153-.844 3.64-2.567 9.581-1.8 10.271-.958.69.843-.192 6.822-3.603 9.658-.536.422-1.034.192-.804-.383.766-1.916 2.49-6.17 1.686-7.243z"
-          clipRule="evenodd"
-        ></path>
-        <path d="M63.139 3.67V1.177c0-.383.268-.613.613-.613h11.115c.345 0 .651.268.651.613v2.108c0 .345-.306.805-.843 1.571l-5.749 8.202c2.146-.038 4.408.268 6.324 1.341.421.23.536.614.575.959v2.644c0 .383-.383.805-.805.575-3.411-1.801-7.972-1.993-11.728.038-.383.192-.805-.191-.805-.575v-2.529c0-.383 0-1.073.422-1.686l6.669-9.543H63.79c-.344 0-.651-.269-.651-.614zm-40.51 15.445h-3.373c-.306-.039-.575-.269-.613-.575V1.217c0-.345.307-.614.652-.614h3.142c.345 0 .575.269.613.575V3.44h.077C23.932 1.255 25.503.22 27.573.22c2.108 0 3.45 1.035 4.369 3.22.805-2.185 2.683-3.22 4.676-3.22 1.418 0 2.95.575 3.909 1.916 1.073 1.457.843 3.565.843 5.443v10.96c0 .346-.306.614-.651.614h-3.335c-.345-.038-.613-.307-.613-.613V9.342c0-.729.077-2.568-.077-3.258-.268-1.15-.996-1.495-1.992-1.495-.805 0-1.687.537-2.032 1.418-.345.882-.306 2.338-.306 3.335v9.198c0 .345-.307.613-.652.613H28.34c-.345-.038-.613-.307-.613-.613V9.342c0-1.917.307-4.791-2.07-4.791-2.414 0-2.337 2.76-2.337 4.79v9.199c-.038.306-.307.575-.69.575zM85.099.22c5.021 0 7.742 4.293 7.742 9.773 0 5.289-2.99 9.505-7.741 9.505-4.906 0-7.589-4.293-7.589-9.658C77.473 4.436 80.194.22 85.1.22zm0 3.564c-2.49 0-2.644 3.411-2.644 5.52 0 2.107-.038 6.63 2.606 6.63 2.606 0 2.76-3.641 2.76-5.864 0-1.457-.077-3.22-.499-4.6-.383-1.226-1.15-1.686-2.222-1.686zm14.22 15.33h-3.373c-.345-.038-.614-.306-.614-.613V1.14a.662.662 0 01.652-.575h3.143c.306 0 .536.23.613.498v2.645h.077c.958-2.376 2.261-3.488 4.599-3.488 1.494 0 2.989.537 3.947 2.031.882 1.38.882 3.718.882 5.404v10.923c-.039.307-.307.537-.652.537h-3.373c-.306-.039-.574-.269-.613-.537V9.15c0-1.916.23-4.676-2.108-4.676-.804 0-1.571.537-1.954 1.38-.46 1.073-.537 2.108-.537 3.296V18.5a.702.702 0 01-.69.614zm-41.622-.038a.693.693 0 01-.805.077c-1.111-.92-1.341-1.38-1.955-2.261-1.84 1.878-3.18 2.453-5.557 2.453-2.836 0-5.059-1.764-5.059-5.251 0-2.76 1.495-4.6 3.603-5.519 1.84-.805 4.407-.958 6.362-1.188v-.422c0-.804.076-1.763-.422-2.452-.421-.614-1.188-.882-1.878-.882-1.303 0-2.453.652-2.72 2.031-.078.307-.27.614-.576.614l-3.257-.345c-.269-.077-.575-.269-.499-.69.767-3.986 4.331-5.174 7.55-5.174 1.648 0 3.795.421 5.098 1.686 1.648 1.533 1.495 3.603 1.495 5.826v5.25c0 1.571.651 2.261 1.264 3.143.23.307.268.69 0 .881-.728.575-1.954 1.648-2.644 2.223zm-3.411-8.24v-.728c-2.453 0-5.02.537-5.02 3.411 0 1.456.766 2.453 2.069 2.453.958 0 1.801-.575 2.338-1.533.651-1.188.613-2.3.613-3.603zm-41.698 8.317c-1.112-.92-1.342-1.38-1.955-2.261-1.84 1.878-3.181 2.453-5.557 2.453-2.836 0-5.06-1.764-5.06-5.251 0-2.76 1.496-4.6 3.603-5.519 1.84-.805 4.408-.958 6.362-1.188v-.422c0-.804.077-1.763-.421-2.452-.422-.614-1.188-.882-1.878-.882-1.303 0-2.453.652-2.721 2.031-.077.307-.268.614-.575.614L1.128 5.93C.86 5.854.553 5.662.63 5.24 1.397 1.255 4.96.067 8.18.067c1.648 0 3.794.421 5.098 1.686 1.647 1.533 1.494 3.603 1.494 5.826v5.25c0 1.571.652 2.261 1.265 3.143.23.307.268.69 0 .881-.728.575-1.955 1.648-2.644 2.223a.693.693 0 01-.805.077zm-2.568-8.317v-.728c-2.453 0-5.02.537-5.02 3.411 0 1.456.766 2.453 2.069 2.453.958 0 1.801-.575 2.338-1.533.651-1.188.613-2.3.613-3.603z"></path>
-      </g>
-      <defs>
-        <clipPath id="clip0">
-          <path fill="#fff" d="M0 0H109.272V33H0z"></path>
-        </clipPath>
-      </defs>
-    </svg>
-  );
-}
+// function AmazonLogo() {
+//   return (
+//     <svg
+//       xmlns="http://www.w3.org/2000/svg"
+//       width="110"
+//       height="33"
+//       fill="none"
+//       viewBox="0 0 110 33"
+//     >
+//       <g fill="currentColor" clipPath="url(#clip0)">
+//         <path
+//           fillRule="evenodd"
+//           d="M67.776 25.783c-6.323 4.676-15.521 7.167-23.455 7.167-11.114 0-21.079-4.1-28.667-10.923-.575-.536-.077-1.264.651-.843 8.163 4.752 18.243 7.589 28.668 7.589 7.013 0 14.755-1.457 21.884-4.485 1.073-.421 1.954.729.92 1.495z"
+//           clipRule="evenodd"
+//         ></path>
+//         <path
+//           fillRule="evenodd"
+//           d="M70.42 22.756c-.804-1.035-5.365-.499-7.396-.23-.613.076-.728-.46-.153-.844 3.64-2.567 9.581-1.8 10.271-.958.69.843-.192 6.822-3.603 9.658-.536.422-1.034.192-.804-.383.766-1.916 2.49-6.17 1.686-7.243z"
+//           clipRule="evenodd"
+//         ></path>
+//         <path d="M63.139 3.67V1.177c0-.383.268-.613.613-.613h11.115c.345 0 .651.268.651.613v2.108c0 .345-.306.805-.843 1.571l-5.749 8.202c2.146-.038 4.408.268 6.324 1.341.421.23.536.614.575.959v2.644c0 .383-.383.805-.805.575-3.411-1.801-7.972-1.993-11.728.038-.383.192-.805-.191-.805-.575v-2.529c0-.383 0-1.073.422-1.686l6.669-9.543H63.79c-.344 0-.651-.269-.651-.614zm-40.51 15.445h-3.373c-.306-.039-.575-.269-.613-.575V1.217c0-.345.307-.614.652-.614h3.142c.345 0 .575.269.613.575V3.44h.077C23.932 1.255 25.503.22 27.573.22c2.108 0 3.45 1.035 4.369 3.22.805-2.185 2.683-3.22 4.676-3.22 1.418 0 2.95.575 3.909 1.916 1.073 1.457.843 3.565.843 5.443v10.96c0 .346-.306.614-.651.614h-3.335c-.345-.038-.613-.307-.613-.613V9.342c0-.729.077-2.568-.077-3.258-.268-1.15-.996-1.495-1.992-1.495-.805 0-1.687.537-2.032 1.418-.345.882-.306 2.338-.306 3.335v9.198c0 .345-.307.613-.652.613H28.34c-.345-.038-.613-.307-.613-.613V9.342c0-1.917.307-4.791-2.07-4.791-2.414 0-2.337 2.76-2.337 4.79v9.199c-.038.306-.307.575-.69.575zM85.099.22c5.021 0 7.742 4.293 7.742 9.773 0 5.289-2.99 9.505-7.741 9.505-4.906 0-7.589-4.293-7.589-9.658C77.473 4.436 80.194.22 85.1.22zm0 3.564c-2.49 0-2.644 3.411-2.644 5.52 0 2.107-.038 6.63 2.606 6.63 2.606 0 2.76-3.641 2.76-5.864 0-1.457-.077-3.22-.499-4.6-.383-1.226-1.15-1.686-2.222-1.686zm14.22 15.33h-3.373c-.345-.038-.614-.306-.614-.613V1.14a.662.662 0 01.652-.575h3.143c.306 0 .536.23.613.498v2.645h.077c.958-2.376 2.261-3.488 4.599-3.488 1.494 0 2.989.537 3.947 2.031.882 1.38.882 3.718.882 5.404v10.923c-.039.307-.307.537-.652.537h-3.373c-.306-.039-.574-.269-.613-.537V9.15c0-1.916.23-4.676-2.108-4.676-.804 0-1.571.537-1.954 1.38-.46 1.073-.537 2.108-.537 3.296V18.5a.702.702 0 01-.69.614zm-41.622-.038a.693.693 0 01-.805.077c-1.111-.92-1.341-1.38-1.955-2.261-1.84 1.878-3.18 2.453-5.557 2.453-2.836 0-5.059-1.764-5.059-5.251 0-2.76 1.495-4.6 3.603-5.519 1.84-.805 4.407-.958 6.362-1.188v-.422c0-.804.076-1.763-.422-2.452-.421-.614-1.188-.882-1.878-.882-1.303 0-2.453.652-2.72 2.031-.078.307-.27.614-.576.614l-3.257-.345c-.269-.077-.575-.269-.499-.69.767-3.986 4.331-5.174 7.55-5.174 1.648 0 3.795.421 5.098 1.686 1.648 1.533 1.495 3.603 1.495 5.826v5.25c0 1.571.651 2.261 1.264 3.143.23.307.268.69 0 .881-.728.575-1.954 1.648-2.644 2.223zm-3.411-8.24v-.728c-2.453 0-5.02.537-5.02 3.411 0 1.456.766 2.453 2.069 2.453.958 0 1.801-.575 2.338-1.533.651-1.188.613-2.3.613-3.603zm-41.698 8.317c-1.112-.92-1.342-1.38-1.955-2.261-1.84 1.878-3.181 2.453-5.557 2.453-2.836 0-5.06-1.764-5.06-5.251 0-2.76 1.496-4.6 3.603-5.519 1.84-.805 4.408-.958 6.362-1.188v-.422c0-.804.077-1.763-.421-2.452-.422-.614-1.188-.882-1.878-.882-1.303 0-2.453.652-2.721 2.031-.077.307-.268.614-.575.614L1.128 5.93C.86 5.854.553 5.662.63 5.24 1.397 1.255 4.96.067 8.18.067c1.648 0 3.794.421 5.098 1.686 1.647 1.533 1.494 3.603 1.494 5.826v5.25c0 1.571.652 2.261 1.265 3.143.23.307.268.69 0 .881-.728.575-1.955 1.648-2.644 2.223a.693.693 0 01-.805.077zm-2.568-8.317v-.728c-2.453 0-5.02.537-5.02 3.411 0 1.456.766 2.453 2.069 2.453.958 0 1.801-.575 2.338-1.533.651-1.188.613-2.3.613-3.603z"></path>
+//       </g>
+//         <defs>
+//           <clipPath id="clip0">
+//             <path fill="#fff" d="M0 0H109.272V33H0z"></path>
+//           </clipPath>
+//         </defs>
+//     </svg>
+//   );
+// }
 
 function MicrosoftLogo() {
   return (

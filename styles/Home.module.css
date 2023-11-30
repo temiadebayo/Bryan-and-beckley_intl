@@ -114,3 +114,7 @@
     flex-direction: column;
   }
 }
+
+.focus_tab:focus{
+outline: 4px solid #620D66;
+}

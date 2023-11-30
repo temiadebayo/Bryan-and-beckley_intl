@@ -5,20 +5,24 @@ import Link from "next/link"
 import Hero from '../components/Hero'
 import Article from "../components/Article"
 import { benefitOne, benefitTwo } from "../lib/data"
+import Footer from "../components/Footer"
+import TeamPage from "../components/TeamPage"
 
 
 export default function Home() {
   return (
-    <motion.div className="">
+    <motion.div className="relative">
       <Head>
-        <title>Delta Theme - Business Page Template</title>
-        <meta name="description" content="Business page landing page template" />
+        <title>Bryan and Beckley international</title>
+        <meta name="description" content="Bryan and Beckley international all access" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar/>
       <Hero/>
+
       <Article benefit={benefitOne} imgleft="true"/>
-      <Article benefit={benefitTwo}/>
+      {/* <Article benefit={benefitTwo}/> */}
+      <Footer />
     </motion.div>
   )
 }

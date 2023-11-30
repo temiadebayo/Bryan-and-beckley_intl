@@ -4,7 +4,7 @@ import ThemeChanger from './ThemeSwicher';
 import Image from 'next/image';
 
 export default function Navbar() {
-  const navigation = ['Product', 'Partners', 'About Us', 'Team'];
+  const navigation = ['Product', 'Partners', 'About Us', 'Team', 'Contact us'];
   const easing = [0.6, -0.5, 0.01, 0.99];
   const fadeInUp = {
     initial: {
@@ -32,27 +32,26 @@ export default function Navbar() {
     <motion.div
       initial="initial"
       animate="animate"
-      className="xl:container xl:mx-auto z-50 fixed overflow-hidden transition-transform duration-500 ease-out-circ inset-0 "
+      className="xl:container  xl:mx-auto bg-transparent sticky z-40 overflow-hidden transition-transform duration-500 ease-out inset-0 "
     >
       <motion.nav
         variants={stagger}
-        className="flex justify-between px-4 md:px-9 py-5 items-center relative inset-x-0 top-0 -bottom-0.5 bg-bottom bg-[length:100% - 138%] bg-gradient-to-b from-transparent to-transparent to-[calc(100% - 2px)]"
-      >
-        <motion.h2 variants={fadeInUp} className="text-3xl font-bold">
+        className="flex justify-between bg-transparent  px-6 md:px-9 py-5 items-center inset-x-0 top-0 ease-out-circ">
+        <motion.div variants={fadeInUp} >
           <Image
             src="/images/B_B.png"
             alt="logo of bryan and beckley"
             width={42}
             height={45}
           />
-        </motion.h2>
+        </motion.div>
         {/* menu */}
         <motion.div variants={fadeInUp}>
           <motion.ul variants={stagger} className="hidden md:flex">
             {navigation.map((menu, index) => (
               <motion.li variants={fadeInUp} key={index} className="ml-6">
-                <Link href="#">
-                  <a className="text-lg hover:text-[#620D66]">{menu}</a>
+                <Link href="/TeamPage">
+                  <a className="text-lg hover:border-b-4 focus:outline-[#eb7df0]">{menu}</a>
                 </Link>
               </motion.li>
             ))}
@@ -64,7 +63,7 @@ export default function Navbar() {
           className="hidden space-x-4 lg:flex nav__item"
         >
           <Link href="/">
-            <a className="px-6 py-2 text-white bg-[#620D66] rounded-md md:ml-5">
+            <a className="px-6 py-2 text-white  hover:text-black bg-[#620D66] hover:border hover:bg-transparent dark:hover:bg-[#eb7df0] rounded">
               Get Quote
             </a>
           </Link>
