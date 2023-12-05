@@ -1,7 +1,6 @@
 import React from 'react';
 
-
-const TeamPage = () => {
+const Team = () => {
   const team = [
     {
       avatar:
@@ -62,7 +61,7 @@ const TeamPage = () => {
           </h3>
           <p className="text-gray-600 mt-3">
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.Lorem Ipsum has been the industry's standard dummy.
+            industry.Lorem Ipsum has been the industry&apos;s standard dummy.
           </p>
         </div>
         <div className="mt-12">
@@ -132,4 +131,4 @@ const TeamPage = () => {
   );
 };
 
-export default TeamPage;
+export default Team;

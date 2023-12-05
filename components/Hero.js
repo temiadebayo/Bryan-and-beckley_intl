@@ -39,7 +39,6 @@ export default function Home() {
   return (
     <motion.div className="relative">
       <section className="relative  ">
-        <div className="w-full absolute z-50  "></div>
         <video
           playsInline={true}
           autoPlay={true}

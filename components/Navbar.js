@@ -3,8 +3,15 @@ import { animate, motion } from 'framer-motion';
 import ThemeChanger from './ThemeSwicher';
 import Image from 'next/image';
 
+
 export default function Navbar() {
-  const navigation = ['Product', 'Partners', 'About Us', 'Team', 'Contact us'];
+  const navigation = [
+    { name: 'Product', link: '/' },
+    { name: 'Partners', link: '/' },
+    { name: 'About Us', link: '/' },
+    { name: 'Team', link: '/team' },
+    { name: 'Contact us', link: '/' },
+  ];
   const easing = [0.6, -0.5, 0.01, 0.99];
   const fadeInUp = {
     initial: {
@@ -36,8 +43,9 @@ export default function Navbar() {
     >
       <motion.nav
         variants={stagger}
-        className="flex justify-between bg-transparent  px-6 md:px-9 py-5 items-center inset-x-0 top-0 ease-out-circ">
-        <motion.div variants={fadeInUp} >
+        className="flex justify-between bg-transparent  px-6 md:px-9 py-5 items-center inset-x-0 top-0 ease-out-circ"
+      >
+        <motion.div variants={fadeInUp}>
           <Image
             src="/images/B_B.png"
             alt="logo of bryan and beckley"
@@ -50,8 +58,13 @@ export default function Navbar() {
           <motion.ul variants={stagger} className="hidden md:flex">
             {navigation.map((menu, index) => (
               <motion.li variants={fadeInUp} key={index} className="ml-6">
-                <Link href="/TeamPage">
-                  <a className="text-lg hover:border-b-4 focus:outline-[#eb7df0]">{menu}</a>
+                <Link href={`${menu.link}`}>
+                  <a
+                    href={menu.link}
+                    className="text-lg hover:border-b-4 focus:outline-[#eb7df0]"
+                  >
+                    {menu.name}
+                  </a>
                 </Link>
               </motion.li>
             ))}

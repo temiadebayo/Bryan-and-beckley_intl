@@ -6,7 +6,7 @@ import Hero from '../components/Hero'
 import Article from "../components/Article"
 import { benefitOne, benefitTwo } from "../lib/data"
 import Footer from "../components/Footer"
-import TeamPage from "../components/TeamPage"
+
 
 
 export default function Home() {
