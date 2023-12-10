@@ -116,18 +116,16 @@ export default function Home() {
         animate={controls}
         initial="initial"
         variants={fadeInUp}
-        className="xl:container xl:mx-auto px-9 text-center p-8"
+        className="xl:container xl:mx-auto px-9 text-center"
       >
-        <div className="dark:text-[#eb7df0] mb-4 font-bold text-[#620D66]">
-          NEXTLY BENEFITS
+        <div className="dark:text-[#eb7df0] my-6 pt-6 font-bold text-[#620D66]">
+          VALUE PROPOSITION
         </div>
-        <h2 className="text-3xl font-bold lg:text-4xl mb-4">
-          Why should you use this landing page
-        </h2>
-        <p className="md:px-24 lg:px-[18rem] text-l">
-          Nextly is a free landing page & marketing website template for
-          startups and indie projects. Its built with Next.js & TailwindCSS. And
-          its completely open-source.
+        {/* <h2 className="text-3xl font-thin lg:text-3xl mb-2">
+        Architecturing integrated IT infrastructure and digital solutions with cumulative 20 years experience
+        </h2> */}
+        <p className="md:px-24 lg:px-[8rem] text-l">
+        Bryan & Beckley International is a multinational IT Infrastructure and Digital Solutions provider across Africa. With a multinational presence, we excel in unified communications, data center, and security solutions, offering top-notch technical support and exceeding corporate client expectations. Trust us to be your IT partner for African success
         </p>
       </motion.div>
     </motion.div>

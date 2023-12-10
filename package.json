@@ -12,6 +12,7 @@
     "@cloudinary/react": "^1.11.2",
     "@cloudinary/url-gen": "^1.13.0",
     "@heroicons/react": "^1.0.6",
+    "axios": "^1.6.2",
     "cloudinary": "^1.41.0",
     "framer-motion": "^6.2.8",
     "next": "12.1.0",

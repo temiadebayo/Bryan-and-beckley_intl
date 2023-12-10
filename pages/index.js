@@ -6,6 +6,7 @@ import Hero from '../components/Hero'
 import Article from "../components/Article"
 import { benefitOne, benefitTwo } from "../lib/data"
 import Footer from "../components/Footer"
+import News from "../components/News"
 
 
 
@@ -22,6 +23,7 @@ export default function Home() {
 
       <Article benefit={benefitOne} imgleft="true"/>
       {/* <Article benefit={benefitTwo}/> */}
+      <News />
       <Footer />
     </motion.div>
   )
