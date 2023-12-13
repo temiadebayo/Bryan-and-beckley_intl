@@ -7,7 +7,17 @@ const Mission = () => {
       <div className="max-w-screen-xl mx-auto md:px-8">
         <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
           <div className="flex-1 sm:hidden lg:block">
-         
+            <Image
+              src="/images/valueprop.png"
+              className="md:max-w-lg sm:rounded-lg "
+              style={{ maxWidth :'100%', height :'auto' ,}}
+              alt="Article Illustration"
+              placeholder="blur"
+              // objectFit="contain"
+              // objectPosition="fill"
+              loading="eager"
+            />
+          </div>
           <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
             <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
               Who Are We?

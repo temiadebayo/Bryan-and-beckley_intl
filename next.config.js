@@ -1,10 +1,27 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    domains: ['s.yimg.com', media.wired.com],
-  },
+// next.config.js
 
+const {withContentlayer} = require('next-contentlayer')
+
+// Your other code ...
+
+
+const nextConfig = {
+
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+        pathname: '',
+      },
+    ],
+  },
   reactStrictMode: true,
 };
 
-module.exports = nextConfig;
+
+
+
+
+module.exports = withContentlayer({...nextConfig});

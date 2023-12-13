@@ -7,10 +7,12 @@ import Article from "../components/Article"
 import { benefitOne, benefitTwo } from "../lib/data"
 import Footer from "../components/Footer"
 import News from "../components/News"
+import { allDocs } from "../.contentlayer/generated"
 
 
 
 export default function Home() {
+  console.log(allDocs)
   return (
     <motion.div className="relative">
       <Head>

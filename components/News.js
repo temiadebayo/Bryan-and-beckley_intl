@@ -46,14 +46,7 @@ const News = () => {
                 className="bg-white space-y-3 p-4 border rounded-lg min-w-92"
               >
                 <div className="text-indigo-600 pb-3">
-                  <Image
-                    src={`${item.urlToImage}`}
-                    alt="Picture of the author"
-                    layout='fill'
-                    // width={500}
-                    // height={500}
-
-                  />
+                
                 </div>
                 <h4 className="text-lg text-gray-800 font-semibold">
                   {item.title}

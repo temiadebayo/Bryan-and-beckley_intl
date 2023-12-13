@@ -10,7 +10,7 @@ export default function Navbar() {
     { name: 'Partners', link: '/' },
     { name: 'About Us', link: '/' },
     { name: 'Team', link: '/team' },
-    { name: 'Contact us', link: '/' },
+    { name: 'Contact us', link: '/contact' },
   ];
   const easing = [0.6, -0.5, 0.01, 0.99];
   const fadeInUp = {
@@ -39,11 +39,11 @@ export default function Navbar() {
     <motion.div
       initial="initial"
       animate="animate"
-      className="xl:container  xl:mx-auto bg-transparent sticky z-40 overflow-hidden transition-transform duration-500 ease-out inset-0 "
+      className="xl:container  xl:mx-auto z-40 overflow-hidden transition-transform duration-500 ease-out inset-0 fixed"
     >
       <motion.nav
         variants={stagger}
-        className="flex justify-between bg-transparent  px-6 md:px-9 py-5 items-center inset-x-0 top-0 ease-out-circ"
+        className="flex justify-between px-6 md:px-9 py-5 items-center inset-x-0 top-0 ease-out-circ"
       >
         <motion.div variants={fadeInUp}>
           <Image
@@ -61,7 +61,7 @@ export default function Navbar() {
                 <Link href={`${menu.link}`}>
                   <a
                     href={menu.link}
-                    className="text-lg hover:border-b-4 focus:outline-[#eb7df0]"
+                    className="text-lg hover:border-b-4 pb-2 focus:outline-[#eb7df0]"
                   >
                     {menu.name}
                   </a>

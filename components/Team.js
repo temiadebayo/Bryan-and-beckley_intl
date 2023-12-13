@@ -1,52 +1,58 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Team = () => {
   const team = [
     {
       avatar:
-        'https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ',
-      name: 'Martiana dialan',
+        'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702379161/Bryan%20and%20Beckley/WhatsApp_Image_2023-11-23_at_12.52.29_PM_ijigl9.jpg',
+      name: 'Kehinde Oyedeji',
       title: 'Product designer',
       desc: 'Lorem Ipsum is simply dummy text of the printing and typesettin industry.',
       linkedin: 'javascript:void(0)',
       twitter: 'javascript:void(0)',
     },
     {
-      avatar: 'https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg',
-      name: 'Micheal colorand',
-      title: 'Software engineer',
+      avatar:
+        'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702379161/Bryan%20and%20Beckley/WhatsApp_Image_2023-11-20_at_2.48.51_PM_tm6kw5.jpg',
+      name: 'Femi Adefola',
+      title: 'FINANCE & ADMIN OFFICER',
       desc: 'Lorem Ipsum is simply dummy text of the printing and typesettin industry.',
       linkedin: 'javascript:void(0)',
       twitter: 'javascript:void(0)',
     },
     {
-      avatar: 'https://randomuser.me/api/portraits/women/79.jpg',
-      name: 'Brown Luis',
-      title: 'Full stack engineer',
+      avatar:
+        'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702379161/Bryan%20and%20Beckley/WhatsApp_Image_2023-11-20_at_5.02.07_PM_ksud9r.jpg',
+      name: 'Corban Ifovboa',
+      title: 'ACCOUNT MANAGER(West Africa)',
       desc: 'Lorem Ipsum is simply dummy text of the printing and typesettin industry.',
       linkedin: 'javascript:void(0)',
       twitter: 'javascript:void(0)',
     },
     {
-      avatar: 'https://randomuser.me/api/portraits/women/63.jpg',
-      name: 'Lysa sandiago',
-      title: 'Head of designers',
+      avatar:
+        'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702379161/Bryan%20and%20Beckley/WhatsApp_Image_2023-11-20_at_5.02.07_PM_ksud9r.jpg',
+      name: 'Florence Gichuki',
+      title: 'BUSINESS DEVELOPNMENT MANAGER (East Africa)',
       desc: 'Lorem Ipsum is simply dummy text of the printing and typesettin industry.',
       linkedin: 'javascript:void(0)',
       twitter: 'javascript:void(0)',
     },
     {
-      avatar: 'https://randomuser.me/api/portraits/men/86.jpg',
-      name: 'Daniel martin',
-      title: 'Product designer',
+      avatar:
+        'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702379161/Bryan%20and%20Beckley/WhatsApp_Image_2023-12-07_at_1.32.51_PM_itulei.jpg',
+      name: 'Tobi Falayi',
+      title: 'EA & Human Resource',
       desc: 'Lorem Ipsum is simply dummy text of the printing and typesettin industry.',
       linkedin: 'javascript:void(0)',
       twitter: 'javascript:void(0)',
     },
     {
-      avatar: 'https://randomuser.me/api/portraits/men/46.jpg',
-      name: 'Vicky tanson',
-      title: 'Product manager',
+      avatar:
+        'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702379161/Bryan%20and%20Beckley/WhatsApp_Image_2023-11-29_at_12.03.56_PM_ysqky8.jpg',
+      name: 'Onyenghan Bryan',
+      title: 'Pre-Sale Engineer',
       desc: 'Lorem Ipsum is simply dummy text of the printing and typesettin industry.',
       linkedin: 'javascript:void(0)',
       twitter: 'javascript:void(0)',
@@ -68,11 +74,11 @@ const Team = () => {
           <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
             {team.map((item, idx) => (
               <li key={idx}>
-                <div className="w-24 h-24 mx-auto">
-                  <image
+                <div className="container w-auto h-[450px] rounded-full">
+                  <img
                     src={item.avatar}
                     className="w-full h-full rounded-full"
-                    alt=""
+                    alt="#"
                   />
                 </div>
                 <div className="mt-2">

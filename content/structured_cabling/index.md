@@ -1,0 +1,5 @@
+---
+title: 'Structured Cabling'
+images: 'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702466501/Bryan%20and%20Beckley/Vendors%20LOGO/16_nectdj.png'
+desc: 'Bryan & Beckley's structured cabling solutions, we design and deliver scalable infrastructure tailored to your business needs. Our offerings span all six structured cabling subsystems, from entrance facilities to equipment rooms and work area components. We provide reliable hardware i.e. racks, network cabinets, copper and fibre cable and more to build high-performance infrastructure. Our expert teams and global delivery capabilities help maximise ROI by implementing solutions that adapt as your business grows. Rely on us for future-proof cabling that empowers productivity' 
+---
