@@ -2,7 +2,7 @@ import { makeSource, defineDocumentType } from '@contentlayer/source-files';
 
 const Doc = defineDocumentType(() => ({
   name: 'Doc',
-  filePathPattern: '**/*.md',
+  filePathPattern: '**/*.mdx',
   fields: {
     title: {
       type: 'string',
@@ -17,7 +17,7 @@ const Doc = defineDocumentType(() => ({
   computedFields: {
     url_path: {
       type: 'string',
-      resolve: (doc) => doc._raw.flattenedPath.replace(/pages\/?/, ''),
+      resolve: (doc) => `/${doc._raw.flattenedPath}`,
     },
   },
 }));

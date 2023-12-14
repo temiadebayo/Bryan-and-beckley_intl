@@ -25,7 +25,7 @@ export default function Home() {
 
       <Article benefit={benefitOne} imgleft="true"/>
       {/* <Article benefit={benefitTwo}/> */}
-      <News />
+      {/* <News /> */}
       <Footer />
     </motion.div>
   )

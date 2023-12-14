@@ -1,5 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { allDocs } from '../.contentlayer/generated';
 
 const Features = () => {
   return (
@@ -161,6 +162,17 @@ const Features = () => {
           </div>
         </a>
         {/* Cards ends here - Thank you  */}
+        {allDocs.map((item, index) => (
+          <div key={index}>
+            <h1>{item.title}</h1>
+
+            <img src={item.images} alt="/" />
+
+            <Link href={`${item.url_path}`}>
+              <p>{item.desc}</p>
+            </Link>
+          </div>
+        ))}
       </div>
     </div>
   );
