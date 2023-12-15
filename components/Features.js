@@ -1,13 +1,37 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { allDocs } from '../.contentlayer/generated';
+import Logo from './Logo';
 
 const Features = () => {
   return (
-    <div className="h-auto z-40">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-10 ">
+    <div className="h-auto z-40 pb-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {allDocs.map((item, index) => (
+          <a
+            key={index}
+            href={item.url_path}
+            alt="#"
+            className="group block mx-auto rounded-lg p-6  ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 "
+          >
+            <div className=" rounded-xl border border-gray-100 p-4">
+              <span className="inline-block rounded-lg p-3">
+                <div className="inline-flex align-middle justify-center items-center select-none dark:text-white ">
+                  <img src={item.icon} height={50} width={50}/>
+                </div>
+              </span>
+
+              <h2 className="py-2 font-semibold text-base sm:text-lg dark:text-white dark:group-hover:text-white group-hover:text-black ">
+                {item.title}
+              </h2>
+              <p className="sm:mt-1 block text-sm sm:text-base dark:group-hover:text-white group-hover:text-black py-1 px-4">
+                {item.para}
+              </p>
+            </div>
+          </a>
+        ))}
         {/* Card one  */}
-        <a
+        {/* <a
           href="#"
           alt="#"
           className="group block mx-auto rounded-lg p-6  ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 "
@@ -51,9 +75,9 @@ const Features = () => {
               business needs.
             </p>
           </div>
-        </a>
+        </a> */}
         {/* Card two starts Here */}
-        <a
+        {/* <a
           href="#"
           alt="#"
           className="group block mx-auto rounded-lg p-6  ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 "
@@ -86,9 +110,9 @@ const Features = () => {
               work with top retailers from all
             </p>
           </div>
-        </a>
+        </a> */}
         {/* Card Three starts here */}
-        <a
+        {/* <a
           href="#"
           alt="#"
           className="group block mx-auto rounded-lg p-6  ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 "
@@ -124,9 +148,9 @@ const Features = () => {
               for peak efficiency, flexibility and performance.
             </p>
           </div>
-        </a>
+        </a> */}
         {/* Card Four strats here  */}
-        <a
+        {/* <a
           href="#"
           alt="#"
           className="group block mx-auto rounded-lg p-6  ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 "
@@ -160,11 +184,12 @@ const Features = () => {
               sophisticated with our top-notch software & security solutions
             </p>
           </div>
-        </a>
+        </a> */}
         {/* Cards ends here - Thank you  */}
-        {allDocs.map((item, index) => (
-          <div key={index}>
-            <h1>{item.title}</h1>
+
+        {/* {allDocs.map((item, index) => (
+          <div key={index} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <h2>{item.title}</h2>
 
             <img src={item.images} alt="/" />
 
@@ -172,8 +197,9 @@ const Features = () => {
               <p>{item.desc}</p>
             </Link>
           </div>
-        ))}
+        ))} */}
       </div>
+      <Logo />
     </div>
   );
 };

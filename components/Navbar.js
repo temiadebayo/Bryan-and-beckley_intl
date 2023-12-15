@@ -3,7 +3,6 @@ import { animate, motion } from 'framer-motion';
 import ThemeChanger from './ThemeSwicher';
 import Image from 'next/image';
 
-
 export default function Navbar() {
   const navigation = [
     { name: 'Product', link: '/' },
@@ -39,11 +38,11 @@ export default function Navbar() {
     <motion.div
       initial="initial"
       animate="animate"
-      className="xl:container  xl:mx-auto z-40 overflow-hidden transition-transform duration-500 ease-out inset-0 fixed"
+      className="xl:container text-slate-400 xl:mx-auto  overflow-hidden transition-transform duration-500 ease-out inset-0 fixed"
     >
       <motion.nav
         variants={stagger}
-        className="flex justify-between px-6 md:px-9 py-5 items-center inset-x-0 top-0 ease-out-circ"
+        className="flex justify-between p-6 md:px-9 items-center inset-x-0 top-0 "
       >
         <motion.div variants={fadeInUp}>
           <Image
@@ -76,8 +75,8 @@ export default function Navbar() {
           className="hidden space-x-4 lg:flex nav__item"
         >
           <Link href="/">
-            <a className="px-6 py-2 text-white  hover:text-black bg-[#620D66] hover:border hover:bg-transparent dark:hover:bg-[#eb7df0] rounded">
-              Get Quote
+            <a className="px-6 py-2 bg-[#620D66] rounded hover:rounded-full">
+              Generate Quote
             </a>
           </Link>
           <ThemeChanger />

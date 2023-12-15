@@ -1,7 +1,12 @@
-.container {
-  padding: 0 2rem;
+.ord{
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 1rem;
 }
-
+.ord::-webkit-scrollbar{
+  width: 0;
+}
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -108,13 +113,6 @@
   margin-left: 0.5rem;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-.focus_tab:focus{
-outline: 4px solid #620D66;
+.focus_tab:focus {
+  outline: 4px solid #620d66;
 }

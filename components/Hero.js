@@ -80,22 +80,22 @@ export default function Home() {
         variants={fadeInUp}
         className="xl:container xl:mx-auto px-9 text-center"
       >
-        <div className="dark:text-[#eb7df0] my-6 pt-6 font-bold text-[#620D66]">
+        <h2 className="dark:text-[#eb7df0] sm:text-3xl my-4 pt-6 font-bold text-[#620D66]">
           VALUE PROPOSITION
-        </div>
+        </h2>
         {/* <h2 className="text-3xl font-thin lg:text-3xl mb-2">
         Architecturing integrated IT infrastructure and digital solutions with cumulative 20 years experience
         </h2> */}
-        <p className="md:px-24 lg:px-[8rem] lg:text-l">
+        <p className="md:px-24 lg:px-[8rem] text-[14px] lg:text-sm">
           Bryan & Beckley International is a multinational IT Infrastructure and
           Digital Solutions provider across Africa. With a multinational
           presence, we excel in unified communications, data center, and
           security solutions, offering top-notch technical support and exceeding
           corporate client expectations. Trust us to be your IT partner for
-          African success
+          African success <span className="text-xl text-clip">on:</span>
         </p>
       </motion.div>
-      <Logo />
+
     </motion.div>
   );
 }

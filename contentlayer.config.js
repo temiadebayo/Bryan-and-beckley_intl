@@ -10,6 +10,12 @@ const Doc = defineDocumentType(() => ({
     images: {
       type: 'string',
     },
+    icon: {
+      type: 'string',
+    },
+    para: {
+      type: 'string',
+    },
     desc: {
       type: 'string',
     },

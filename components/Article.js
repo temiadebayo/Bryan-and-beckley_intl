@@ -38,7 +38,7 @@ export default function Article({ benefit, imgleft }) {
         initial="initial"
         animate={controls}
         variants={fadeInUp}
-        className="xl:container xl:mx-auto lg:flex px-9 justify-between gap-12 mt-9 items-center text-center p-9 "
+        className="xl:container xl:mx-auto lg:flex px-9 justify-between gap-12 mt-9 items-center text-center py-4 "
       >
         {/* <div className={`lg:w-1/2 ${imgleft === 'true' ? 'order-last' : ''}`}>
         <Image

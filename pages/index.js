@@ -1,32 +1,37 @@
-import Head from 'next/head'
-import Navbar from "../components/Navbar"
-import { motion } from "framer-motion"
-import Link from "next/link"
-import Hero from '../components/Hero'
-import Article from "../components/Article"
-import { benefitOne, benefitTwo } from "../lib/data"
-import Footer from "../components/Footer"
-import News from "../components/News"
-import { allDocs } from "../.contentlayer/generated"
-
-
+import Head from 'next/head';
+import Navbar from '../components/Navbar';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Hero from '../components/Hero';
+import Article from '../components/Article';
+import { benefitOne, benefitTwo } from '../lib/data';
+import Footer from '../components/Footer';
+import News from '../components/News';
+import { useEffect } from 'react';
 
 export default function Home() {
-  console.log(allDocs)
+  useEffect(() => {
+    const holder = localStorage.getItem('theme');
+    console.log(holder)
+  },[]);
+
   return (
     <motion.div className="relative">
       <Head>
         <title>Bryan and Beckley international</title>
-        <meta name="description" content="Bryan and Beckley international all access" />
+        <meta
+          name="description"
+          content="Bryan and Beckley international all access"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar/>
-      <Hero/>
+      <Navbar />
+      <Hero />
 
-      <Article benefit={benefitOne} imgleft="true"/>
+      <Article benefit={benefitOne} imgleft="true" />
       {/* <Article benefit={benefitTwo}/> */}
-      {/* <News /> */}
+      <News />
       <Footer />
     </motion.div>
-  )
+  );
 }
