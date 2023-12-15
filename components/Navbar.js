@@ -38,7 +38,7 @@ export default function Navbar() {
     <motion.div
       initial="initial"
       animate="animate"
-      className="xl:container text-slate-400 xl:mx-auto  overflow-hidden transition-transform duration-500 ease-out inset-0 fixed"
+      className="xl:container text-slate-400 xl:mx-auto  transition-transform duration-500 ease-out "
     >
       <motion.nav
         variants={stagger}
@@ -60,7 +60,7 @@ export default function Navbar() {
                 <Link href={`${menu.link}`}>
                   <a
                     href={menu.link}
-                    className="text-lg hover:border-b-4 pb-2 focus:outline-[#eb7df0]"
+                    className="text-lg hover:border-b-4 pb-2 "
                   >
                     {menu.name}
                   </a>

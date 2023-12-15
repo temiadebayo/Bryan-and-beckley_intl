@@ -4,25 +4,29 @@ import React from 'react';
 const Footer = () => {
   const footerNavs = [
     {
-      href: 'javascript:void()',
+      href: '/',
       name: 'Terms',
     },
     {
-      href: 'javascript:void()',
-      name: 'License',
+      href: '/',
+      name: 'Partners',
     },
     {
-      href: 'javascript:void()',
+      href: '/',
       name: 'Privacy',
     },
     {
-      href: 'javascript:void()',
+      href: '/',
       name: 'About us',
+    },
+    {
+      href: '/',
+      name: 'Contact us',
     },
   ];
 
   return (
-    <footer className="pt-10">
+    <footer className="pt-10 footer">
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
       
         <div className="mt-10 py-10 border-t items-center justify-between sm:flex">

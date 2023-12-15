@@ -8,7 +8,7 @@ const Features = () => {
     <div className="h-auto z-40 pb-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {allDocs.map((item, index) => (
-          <a
+          <Link
             key={index}
             href={item.url_path}
             alt="#"
@@ -28,7 +28,7 @@ const Features = () => {
                 {item.para}
               </p>
             </div>
-          </a>
+          </Link>
         ))}
         {/* Card one  */}
         {/* <a
