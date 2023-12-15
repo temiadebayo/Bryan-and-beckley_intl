@@ -1,6 +1,6 @@
-import { NEWS_GATEWAY_API } from './setupBase';
+import { data } from './setupBase';
 
 export const getTopTechnologyHeadline = () => {
   const url = '/everything';
-  return NEWS_GATEWAY_API.get(url);
+  return data.get(url);
 };
