@@ -23,8 +23,7 @@ export default function Navbar() {
   const navigation = [
     { name: 'Product', link: '/' },
     { name: 'Partners', link: '/' },
-    { name: 'About Us', link: '/' },
-    { name: 'Team', link: '/team' },
+    { name: 'About Us', link: '/about' },
     { name: 'Contact us', link: '/contact' },
   ];
   const easing = [0.6, -0.5, 0.01, 0.99];
@@ -57,7 +56,7 @@ export default function Navbar() {
     // Your code that uses the window object
     window.addEventListener('resize', showButton);
     const changeBackground = () => {
-      if (window.scrollY >= 570) {
+      if (window.scrollY >= 90) {
         setNavBar(true);
       } else {
         setNavBar(false);
