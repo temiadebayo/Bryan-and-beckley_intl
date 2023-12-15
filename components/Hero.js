@@ -48,7 +48,7 @@ export default function Home() {
           muted={true}
           preload="auto"
           src="/bg-video.mp4"
-          className=" relative bg-gradient-to-tr  object-contain"
+          className=" relative object-contain"
         ></video>
         <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 flex flex-col justify-center items-center ">
           <div className="md:mb-[350px] mb-[40px] leading-5 block md:leading-[75px] ">

@@ -2,8 +2,24 @@ import Link from 'next/link';
 import { animate, motion } from 'framer-motion';
 import ThemeChanger from './ThemeSwicher';
 import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
 
 export default function Navbar() {
+  const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
+  const [navBar, setNavBar] = useState(false);
+
+  const handleClick = () => setClick(!click);
+  const handleToggle = () => setClick(false);
+
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(false);
+    }
+  };
+
   const navigation = [
     { name: 'Product', link: '/' },
     { name: 'Partners', link: '/' },
@@ -34,15 +50,35 @@ export default function Navbar() {
       },
     },
   };
+  // useEffect(() => {
+  //   showButton();
+  // }, []);
+  if (typeof window !== 'undefined') {
+    // Your code that uses the window object
+    window.addEventListener('resize', showButton);
+    const changeBackground = () => {
+      if (window.scrollY >= 570) {
+        setNavBar(true);
+      } else {
+        setNavBar(false);
+      }
+    };
+    window.addEventListener('scroll', changeBackground);
+  }
+
   return (
-    <motion.div
+    <div
       initial="initial"
       animate="animate"
-      className="xl:container text-slate-400 xl:mx-auto  transition-transform duration-500 ease-out "
+      className="xl:container text-slate-300 xl:mx-auto transition-transform duration-500 ease-out "
     >
       <motion.nav
         variants={stagger}
-        className="flex justify-between p-6 md:px-9 items-center inset-x-0 top-0 "
+        className={
+          navBar
+            ? 'flex justify-between p-6 fixed z-20  items-center inset-x-0 top-0 bg-slate-100'
+            : 'flex justify-between p-6 fixed z-20 items-center inset-x-0 top-0'
+        }
       >
         <motion.div variants={fadeInUp}>
           <Image
@@ -60,7 +96,7 @@ export default function Navbar() {
                 <Link href={`${menu.link}`}>
                   <a
                     href={menu.link}
-                    className="text-lg hover:border-b-4 pb-2 "
+                    className="text-lg hover:border-b-4 pb-2  text-zinc-800"
                   >
                     {menu.name}
                   </a>
@@ -87,6 +123,6 @@ export default function Navbar() {
           ###
         </motion.div>
       </motion.nav>
-    </motion.div>
+    </div>
   );
 }

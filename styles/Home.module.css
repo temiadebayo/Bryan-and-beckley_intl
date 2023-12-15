@@ -4,6 +4,26 @@
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: 1rem;
 }
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.popup-container.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .ord::-webkit-scrollbar{
   width: 0;
 }

@@ -16,7 +16,7 @@ export default function Home() {
   },[]);
 
   return (
-    <motion.div className="relative">
+    <motion.div className="">
       <Head>
         <title>Bryan and Beckley international</title>
         <meta

@@ -37,16 +37,14 @@ const Logo = () => {
           TRUSTED BY VENDORS FROM AROUND THE WORLD
         </h3>
         <div className="mt-6">
-          <ul className=" flex gap-x-2 sm:gap-x-4  items-center justify-center  lg:divide-x ">
+          <ul className=" flex flex-col sm:flex-row gap-y-7 sm:gap-x-4  items-center justify-center  lg:divide-x ">
             {logoList.map((item, index) => (
               <li key={index} className="px-3 ">
                 <img
                   src={item.link}
                   alt={item.name}
-                  height={100}
-                  width={100}
                   loading="lazy"
-                  className=""
+                  className="sm:h-[150px] sm:w-[250px] w-96 h-16"
                 />
               </li>
             ))}

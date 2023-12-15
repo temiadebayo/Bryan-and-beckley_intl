@@ -3,21 +3,23 @@ import Link from 'next/link';
 import { allDocs } from '../.contentlayer/generated';
 import Logo from './Logo';
 
+
 const Features = () => {
   return (
-    <div className="h-auto z-40 pb-4">
+    <div className="h-auto pb-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {allDocs.map((item, index) => (
           <Link
             key={index}
             href={item.url_path}
+            passHref
             alt="#"
-            className="group block mx-auto rounded-lg p-6  ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 "
+            className=""
           >
-            <div className=" rounded-xl border border-gray-100 p-4">
+            <div className=" rounded-xl border border-gray-100 p-4 group block mx-auto  ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 cursor-pointer ">
               <span className="inline-block rounded-lg p-3">
-                <div className="inline-flex align-middle justify-center items-center select-none dark:text-white ">
-                  <img src={item.icon} height={50} width={50}/>
+                <div className="inline-flex align-middle justify-center items-center select-none  ">
+                  <img src={item.icon} className="h-[60px] w-[60px] "/>
                 </div>
               </span>
 
