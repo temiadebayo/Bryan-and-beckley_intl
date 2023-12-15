@@ -1,7 +1,5 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { getTopTechnologyHeadline } from '../api-setup/news';
-import blogNews from "../api-setup/setupBase";
 import Image from 'next/image';
 import axios from 'axios'
 import styles from '/styles/Home.module.css'
@@ -51,7 +49,7 @@ useEffect(() => {
                 <div className="text-indigo-600 pb-3">
                 
                 </div>
-                <Link href={item.url} >
+                <Link href={item.url} passHref>
                 <h4 className="text-lg text-gray-800 hover:underline font-semibold cursor-pointer">
                   {item.title}
                 </h4>
