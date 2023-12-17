@@ -47,17 +47,17 @@ export default function Home() {
           loop={true}
           muted={true}
           preload="auto"
-          src="/bg-video.mp4"
-          className=" relative object-contain"
+          src="https://res.cloudinary.com/dzcwvkzmy/video/upload/v1702722285/Bryan%20and%20Beckley/Element/bg-video_z1wtgv.mp4"
+          className=" relative object-contain min-w-full"
         ></video>
         <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 flex flex-col justify-center items-center ">
-          <div className="md:mb-[350px] mb-[40px] leading-5 block md:leading-[75px] ">
-            <p className="text-white/70 md:text-sm text-[10px] text-center ">
+          <div className="sm:mb-[350px] sm:pt-[140px]  block  lg:leading-[65px] sm:leading-[40px] ">
+            <p className="text-gray-300 lg:text-sm text-[8px] sm:pt-7 lg:py-4 text-center ">
               Meet Bryan & Beckley International Ltd All Access
             </p>
-            <h1 className=" text-center font-bold text-[20px] md:text-[30px] lg:text-[65px]  text-white">
+            <h1 className=" text-center font-semibold text-[20px] md:text-[30px] lg:text-[65px]  text-white">
               Your Innovative IT infrastructure &
-              <span className="block text-[#620D66] dark:text-[#e95df1]">
+              <span className="block text-[#620D66] dark:text-[#A4A9CE]">
                 Digital Solutions
               </span>
             </h1>
@@ -80,7 +80,7 @@ export default function Home() {
         variants={fadeInUp}
         className="xl:container xl:mx-auto px-9 text-center"
       >
-        <h2 className="dark:text-[#eb7df0] sm:text-3xl my-4 pt-6 font-bold text-[#620D66]">
+        <h2 className="dark:text-[#A4A9CE] sm:text-3xl my-4 pt-6 font-bold text-[#620D66]">
           VALUE PROPOSITION
         </h2>
         {/* <h2 className="text-3xl font-thin lg:text-3xl mb-2">

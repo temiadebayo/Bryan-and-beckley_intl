@@ -48,7 +48,7 @@ const About = () => {
                   <p>
                     We provide hardware, software network resources and
                     services, which are required to run an organization
-                    successfully
+                    successfully.
                   </p>
                 </div>
               </div>

@@ -6,45 +6,50 @@ const Logo = () => {
   const logoList = [
     {
       name: 'Commscope Logo',
-      link: 'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702551817/Bryan%20and%20Beckley/Vendors%20LOGO/commscope_kvhcsf.svg',
+      link: 'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702822898/Bryan%20and%20Beckley/Vendors%20LOGO/Commscope_logo_z12gsi.png',
+      href: '#',
     },
 
     {
       name: 'Austin Hughes logo',
       link: 'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702551818/Bryan%20and%20Beckley/Vendors%20LOGO/Austin_Hughes_dwndag.svg',
+      href: '#',
     },
 
     {
       name: 'Rittal logo',
       link: 'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702551817/Bryan%20and%20Beckley/Vendors%20LOGO/Rittal_fc6ehy.svg',
+      href: '#',
     },
 
     {
       name: 'Ruckus logo',
-      link: 'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702551818/Bryan%20and%20Beckley/Vendors%20LOGO/Ruckus_fnacnh.svg',
+      link: 'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702822887/Bryan%20and%20Beckley/Vendors%20LOGO/Ruckus_Logo_janfrk.png',
+      href: '#',
     },
 
     {
       name: ' C&D logo',
       link: 'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702551818/Bryan%20and%20Beckley/Vendors%20LOGO/C_D_xn6lfg.svg',
+      href: '#',
     },
   ];
 
   return (
     <section className="py-24">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-        <h3 className="font-semibold text-sm text-gray-600 text-center">
+        <h3 className="font-semibold  dark:text-gray-300 text-sm sm:text-lg text-center">
           TRUSTED BY VENDORS FROM AROUND THE WORLD
         </h3>
         <div className="mt-6">
-          <ul className=" flex flex-col sm:flex-row gap-y-7 sm:gap-x-4  items-center justify-center  lg:divide-x ">
+          <ul className=" flex flex-col sm:flex-row gap-y-8 sm:gap-x-6  items-center justify-center  lg:divide-x ">
             {logoList.map((item, index) => (
-              <li key={index} className="px-3 ">
+              <li key={index} className="lg:px-6 sm:p-2 gap-4">
                 <img
                   src={item.link}
                   alt={item.name}
                   loading="lazy"
-                  className="sm:h-[150px] sm:w-[250px] w-96 h-16"
+                  className="sm:h-[100px] sm:w-[200px] lg:w-[350px] lg:h-20"
                 />
               </li>
             ))}

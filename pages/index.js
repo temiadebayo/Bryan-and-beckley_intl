@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
+// import Navbar from '../components/Navbar';
+import NavBar from "../components/NavBar";
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Hero from '../components/Hero';
@@ -10,10 +11,10 @@ import News from '../components/News';
 import { useEffect } from 'react';
 
 export default function Home() {
-  useEffect(() => {
-    const holder = localStorage.getItem('theme');
-    console.log(holder)
-  },[]);
+  // useEffect(() => {
+  //   const holder = localStorage.getItem('theme');
+  //    console.log(holder)
+  // },[]);
 
   return (
     <motion.div className="">
@@ -25,7 +26,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
+      <NavBar />
       <Hero />
 
       <Article benefit={benefitOne} imgleft="true" />
