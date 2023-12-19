@@ -72,10 +72,10 @@ const contact = () => {
   return (
     <section className="bg-[url('/images/Contact-bg.png')] h-screen w-screen bg-cover bg-cotain">
       <main className="py-14 top-0 right-0 pt-[520px]">
-        <div className="max-w-screen-xl mx-auto px-4 text-white md:px-8">
+        <div className="max-w-screen-xl mx-auto px-4  md:px-8">
           <div className="max-w-xl space-y-3">
             <h3 className="sm:text-xl font-semibold">Contact Us</h3>
-            <p className="text-gray-400 text-3xl font-semibold sm:text-4xl">
+            <p className="text-gray-400 text-2xl font-semibold sm:text-3xl">
               Let us know how we can help
             </p>
             <p className="text-gray-200">
@@ -84,14 +84,14 @@ const contact = () => {
             </p>
           </div>
           <div>
-            <ul className="mt-12 flex flex-wrap gap-x-12 gap-y-6 items-center lg:gap-x-24">
+            <ul className="py-4 flex flex-wrap gap-x-12 gap-y-6 items-center lg:gap-x-24">
               {contactMethods.map((item, idx) => (
                 <li key={idx}>
-                  <h4 className="text-gray-400 text-lg font-medium">
+                  <h4 className="font-bold">
                     {item.title}
                   </h4>
                   <div className="mt-3 flex items-center gap-x-3">
-                    <div className="flex-none text-gray-400">{item.icon}</div>
+                    <div className="flex-none text-gray-300">{item.icon}</div>
                     <p>{item.contact}</p>
                   </div>
                 </li>

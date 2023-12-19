@@ -40,7 +40,7 @@ const Mission = () => {
               resilience and high perceived value that enable and accelerate
               your business processes and operations.
             </p>
-            <a
+            {/* <a
               href="javascript:void(0)"
               className="inline-flex gap-x-1 items-center text-indigo-600 hover:text-indigo-500 duration-150 font-medium"
             >
@@ -57,7 +57,7 @@ const Mission = () => {
                   clipRule="evenodd"
                 />
               </svg>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

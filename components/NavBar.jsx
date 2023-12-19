@@ -14,8 +14,8 @@ import {
 const NavBar = () => {
   const navigation = [
     // { name: 'Home', link: '/' },
-    { name: 'Product', link: '/contact' },
-    { name: 'Partners', link: '/contact' },
+    // { name: 'Product', link: '/contact' },
+    // { name: 'Partners', link: '/contact' },
     { name: 'About', link: '/about' },
     { name: 'Contact ', link: '/contact' },
   ];
