@@ -18,6 +18,9 @@ const Doc = defineDocumentType(() => ({
     },
     desc: {
       type: 'string',
+    },  
+     more: {
+      type: 'string',
     },
   },
   computedFields: {
