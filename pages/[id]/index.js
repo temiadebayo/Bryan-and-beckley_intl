@@ -12,7 +12,7 @@ const Index = () => {
   const blogposts = allDocs.find((blog) => blog._raw.flattenedPath === post);
   console.log(blogposts);
   return (
-    <div className="p-4 text-left ">
+    <div className="p-4 text-left bg-gray-200">
       <article className="max-w-4xl mx-auto my-8 p-6 flex flex-col gap-4 shadow-sm ">
         <h1 className="font-semibold text-2xl py-4 sm:text-3xl lg:text-4xl">
           {blogposts?.title}
@@ -22,10 +22,11 @@ const Index = () => {
         </p>
         <img
           src={blogposts?.images}
-          className="sm:min-w-[500px] w-auto h-auto rounded-md py-4 "
+          className="sm:min-w-[500px] w-auto h-auto rounded-md py-6 "
         />
-        <p>{blogposts?.more}</p>
+        <p className="sm:leading-6 font-sans">{blogposts?.more}</p>
       </article>
+     
     </div>
   );
 };

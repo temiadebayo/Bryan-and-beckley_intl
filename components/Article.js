@@ -81,6 +81,7 @@ export default function Article({ benefit, imgleft }) {
             </div>
             </div> */}
       </motion.div>
+      
       {/* <Mission /> */}
       <Newsletter />
     </div>

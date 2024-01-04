@@ -1,0 +1,7 @@
+{
+  "databaseURL": "https://Bryan-Onyenghan-s-workspace-4kqr86.us-east-1.xata.sh/db/BryanandBeckley",
+  "codegen": {
+    "output": "src/xata.js",
+    "moduleType": "esm"
+  }
+}

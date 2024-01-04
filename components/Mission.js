@@ -19,10 +19,10 @@ const Mission = () => {
             />
           </div>
           <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
-            <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+            <p className="text-3xl font-semibold sm:text-4xl">
               Who Are We?
             </p>
-            <p className="mt-3 text-gray-600 bg-gradient-to-tl from-slate-800 via-violet-500 to-zinc-400 bg-clip-text text-transparent">
+            <p className="mt-3 ">
               We provide businesses with access to the best IT infrastructure
               and digital solutions. As a fast-growing value-added distributor,
               we leverage our partnership with top-tier technology manufacturers

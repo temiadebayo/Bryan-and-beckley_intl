@@ -1,14 +1,16 @@
-import React from 'react'
-import {Cloudinary} from "@cloudinary/url-gen";
+
+import React from 'react';
+import GenerateQuote from '../components/GenerateQuote';
 
 const quote = () => {
-  const cld = new Cloudinary({cloud: {cloudName: 'dzcwvkzmy'}});
   return (
     <div>
-      
+
+        <GenerateQuote />
+       
+
     </div>
-  )
-}
+  );
+};
 
-export default quote
-
+export default quote;

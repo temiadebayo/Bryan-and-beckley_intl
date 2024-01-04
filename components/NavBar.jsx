@@ -13,7 +13,7 @@ import {
 
 const NavBar = () => {
   const navigation = [
-    // { name: 'Home', link: '/' },
+    { name: 'Home', link: '/' },
     // { name: 'Product', link: '/contact' },
     // { name: 'Partners', link: '/contact' },
     { name: 'About', link: '/about' },
@@ -65,10 +65,14 @@ const NavBar = () => {
         </div>
 
         <div style={{ color: `${textColor}` }} className="hidden md:flex  ">
+          <Link href={'https://www.linkedin.com/company/bryan-and-beckley-international/'}>
+
           <AiOutlineLinkedin
             color="#0077b5"
             className=" pr-2 flex items-center text-5xl cursor-pointer "
           />
+          </Link>
+              <Link href={'/quote'}  passHref>
 
           <button
             style={{ color: `${textColor}` }}
@@ -76,8 +80,9 @@ const NavBar = () => {
           >
             Request a quote
           </button>
+          </Link>
         </div>
-          <ThemeChanger />
+          {/* <ThemeChanger /> */}
         {/* z-10 to display on top of the overlay */}
         <div
           onClick={handleClick}
@@ -97,29 +102,32 @@ const NavBar = () => {
               : 'sm:hidden bg-[#620D66] absolute top-0 right-0 left-[-100%] bottom-0 flex justify-center items-center w-full h-screen text-center ease-in duration-300'
           }
         >
-          <ul className="pt-[260px] h-screen min-w-fit">
+          <ul className="pt-[260px] h-screen min-w-fit"  onClick={handleClick}>
             {navigation.map((item, index) => (
               <li key={index} className="p-4 border-b text-4xl hover:text-gold">
                 <Link href={item.link}>{item.name}</Link>
               </li>
             ))}
 
-            <div className="z-10 pb-[25px] pt-[75px] cursor-pointer flex gap-5 items-center justify-center">
+            {/* <div className="z-10 pb-[25px] pt-[75px] cursor-pointer flex gap-5 items-center justify-center">
               <AiOutlineInstagram size={30} color="#C13584" />
               <AiOutlineFacebook size={30} color=" #3B5998" />
-            </div>
-            <div>
+            </div> */}
+            <div  onClick={handleClick}>
+              <Link href={'/quote'}  passHref>
               <button
-                onClick={handleClick}
+                // onClick={handleClick}
+                
                 className="px-8 py-3 text-[white] border border-[white]
     hover:bg-transparent bg-[#620D66] rounded hover:rounded-full hover:drop-shadow-lg"
               >
                 Generate Quote
-          <ThemeChanger />
               </button>
+              </Link>
             </div>
           </ul>
         </div>
+          <ThemeChanger />
       </div>
     </div>
   );
