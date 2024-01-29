@@ -133,6 +133,13 @@
   margin-left: 0.5rem;
 }
 
-.focus_tab:focus {
-  outline: 4px solid #620d66;
-}
+.focus {
+  color: black;
+  background-color: white;
+  text-decoration: underline
+  }
+  .focus:focus, .focus:hover {
+    color: white;
+    background-color: black;
+    text-decoration: none
+  }

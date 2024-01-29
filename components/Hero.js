@@ -38,19 +38,19 @@ export default function Home() {
   }, [controls, inView]);
 
   return (
-    <motion.div className="relative">
+    <motion.div className="">
       <section className="relative  ">
         <video
-          playsInline={true}
+          // playsInline={true}
           autoPlay={true}
           layout="intrinsic"
           loop={true}
           muted={true}
           preload="auto"
           src="https://res.cloudinary.com/dzcwvkzmy/video/upload/v1702722285/Bryan%20and%20Beckley/Element/bg-video_z1wtgv.mp4"
-          className=" relative object-contain min-w-full"
+          className=" md:h-[85vh] object-cover min-w-full"
         ></video>
-        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 flex flex-col justify-center items-center ">
+        <div className="absolute top-0 left-0 w-screen h-full bg-black bg-opacity-60 flex flex-col justify-center items-center ">
           <div className="sm:mb-[350px] sm:pt-[140px]  block  lg:leading-[65px] sm:leading-[40px] ">
             <p className="text-gray-300 lg:text-sm text-[8px] sm:pt-7 lg:py-4 text-center ">
               Meet Bryan & Beckley International Ltd All Access
@@ -79,20 +79,20 @@ export default function Home() {
         initial="initial"
         variants={fadeInUp}
         className="xl:container xl:mx-auto px-9 text-center"
+        id="value"
       >
-        <h2 className="dark:text-[#A4A9CE] sm:text-3xl my-4 pt-6 font-bold text-[#620D66]">
+        <h2 className="dark:text-[#A4A9CE] sm:text-3xl my-4 py-6 font-bold text-[#620D66]" >
           VALUE PROPOSITION
         </h2>
         {/* <h2 className="text-3xl font-thin lg:text-3xl mb-2">
         Architecturing integrated IT infrastructure and digital solutions with cumulative 20 years experience
         </h2> */}
-        <p className="md:px-24 lg:px-[8rem] text-[14px] lg:text-sm">
+        <p className="md:px-[4rem] lg:px-[8rem] text-[14px] lg:text-lg">
           Bryan & Beckley International is a multinational IT Infrastructure and
           Digital Solutions provider across Africa. With a multinational
           presence, we excel in unified communications, data center, and
           security solutions, offering top-notch technical support and exceeding
-          corporate client expectations. Trust us to be your IT partner for
-          African success <span className="text-xl text-clip">on:</span>
+          corporate client expectations. 
         </p>
       </motion.div>
 

@@ -7,19 +7,19 @@ const Logo = () => {
     {
       name: 'Commscope Logo',
       link: 'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702822898/Bryan%20and%20Beckley/Vendors%20LOGO/Commscope_logo_z12gsi.png',
-      href: '#',
+      href: 'https://www.commscope.com/',
     },
 
     {
       name: 'Austin Hughes logo',
       link: 'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702551818/Bryan%20and%20Beckley/Vendors%20LOGO/Austin_Hughes_dwndag.svg',
-      href: '#',
+      href: 'https://www.austin-hughes.com/',
     },
 
     {
       name: 'Rittal logo',
       link: 'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702551817/Bryan%20and%20Beckley/Vendors%20LOGO/Rittal_fc6ehy.svg',
-      href: '#',
+      href: 'https://www.rittal.com/com-en/',
     },
 
     {
@@ -31,14 +31,14 @@ const Logo = () => {
     {
       name: ' C&D logo',
       link: 'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702551818/Bryan%20and%20Beckley/Vendors%20LOGO/C_D_xn6lfg.svg',
-      href: '#',
+      href: 'https://www.cdtechno.com/',
     },
   ];
 
   return (
-    <section className="py-24">
+    <section className="py-28">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-        <h3 className="font-semibold  dark:text-gray-300 text-sm sm:text-lg text-center">
+        <h3 className="font-semibold  dark:text-gray-300 text-sm sm:text-xl text-center">
           TRUSTED BY VENDORS FROM AROUND THE WORLD
         </h3>
         <div className="mt-6">
@@ -48,8 +48,9 @@ const Logo = () => {
                 <img
                   src={item.link}
                   alt={item.name}
-                  loading="lazy"
-                  className="sm:h-[100px] sm:w-[200px] lg:w-[350px] lg:h-20"
+                  href={item.href}
+                  loading="eager"
+                  className="sm:h-[100px] sm:w-[200px] lg:w-[350px] lg:h-24"
                 />
               </li>
             ))}
