@@ -84,7 +84,7 @@ const NavBar = () => {
         </div>
 
         <div style={{ color: `${textColor}` }} className="hidden md:flex  ">
-          <Link
+          {/* <Link
             href={
               'https://www.linkedin.com/company/bryan-and-beckley-international/'
             }
@@ -94,7 +94,7 @@ const NavBar = () => {
               size={24}
               className=" items-center cursor-pointer "
             />
-          </Link>
+          </Link> */}
           <Link href={'/quote'} passHref>
             <button
               style={{ color: `${textColor}` }}
@@ -104,7 +104,7 @@ const NavBar = () => {
             </button>
           </Link>
         </div>
-        {/* <ThemeChanger /> */}
+        <ThemeChanger />
         {/* z-10 to display on top of the overlay */}
         <div
           onClick={handleClick}

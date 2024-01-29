@@ -45,13 +45,14 @@ const Logo = () => {
           <ul className=" flex flex-col sm:flex-row gap-y-8 sm:gap-x-6  items-center justify-center  lg:divide-x ">
             {logoList.map((item, index) => (
               <li key={index} className="lg:px-6 sm:p-2 gap-4">
-                <img
-                  src={item.link}
-                  alt={item.name}
-                  href={item.href}
-                  loading="eager"
-                  className="sm:h-[100px] sm:w-[200px] lg:w-[350px] lg:h-24"
-                />
+                <a href={item.href}>
+                  <img
+                    src={item.link}
+                    alt={item.name}
+                    loading="eager"
+                    className="sm:h-[100px] sm:w-[200px] lg:w-[350px] lg:h-24 cursor-pointer"
+                  />
+                </a>
               </li>
             ))}
           </ul>

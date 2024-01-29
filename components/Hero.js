@@ -50,7 +50,7 @@ export default function Home() {
           src="https://res.cloudinary.com/dzcwvkzmy/video/upload/v1702722285/Bryan%20and%20Beckley/Element/bg-video_z1wtgv.mp4"
           className=" md:h-[85vh] object-cover min-w-full"
         ></video>
-        <div className="absolute top-0 left-0 w-screen h-full bg-black bg-opacity-60 flex flex-col justify-center items-center ">
+        <div className="absolute top-0 left-0 w-screen h-full bg-black bg-opacity-50 flex flex-col justify-center items-center ">
           <div className="sm:mb-[350px] sm:pt-[140px]  block  lg:leading-[65px] sm:leading-[40px] ">
             <p className="text-gray-300 lg:text-sm text-[8px] sm:pt-7 lg:py-4 text-center ">
               Meet Bryan & Beckley International Ltd All Access
