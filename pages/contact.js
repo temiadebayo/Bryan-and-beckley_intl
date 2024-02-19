@@ -44,7 +44,7 @@ const contact = () => {
           />
         </svg>
       ),
-      contact: '+234(0) 8122222112',
+      contact: '+234(0) ',
       title: 'Phone',
     },
     {
@@ -64,7 +64,7 @@ const contact = () => {
           />
         </svg>
       ),
-      contact: 'hr@bryanandbeckley.com',
+      contact: 'sales@bryanandbeckley.com',
       title: 'Email',
     },
   ];

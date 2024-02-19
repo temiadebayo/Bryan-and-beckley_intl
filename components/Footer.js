@@ -3,18 +3,18 @@ import React from 'react';
 
 const Footer = () => {
   const footerNavs = [
-    {
-      href: '/',
-      name: 'Terms',
-    },
     // {
     //   href: '/',
-    //   name: '',
+    //   name: 'Terms',
     // },
-    {
-      href: '/',
-      name: 'Privacy',
-    },
+    // // {
+    // //   href: '/',
+    // //   name: '',
+    // // },
+    // {
+    //   href: '/',
+    //   name: 'Privacy',
+    // },
     {
       href: '/about',
       name: 'About',

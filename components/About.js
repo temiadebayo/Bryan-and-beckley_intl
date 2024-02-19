@@ -7,7 +7,7 @@ const About = () => {
         <div className="md:py-[150px] bg-[#4A4599] py-[80px]">
           <div>
             <h1 className="sm:text-[30px] lg:text-[50px] text-center font-semibold">
-              Redefining the future Of Distribution Patternship
+            Redefining the Future of Distribution Partnership
             </h1>
             <p className=" text-center font-white px-6 sm:text-[25px] text-[20px]   leading-8 py-8">
               We are committed to building cloud-based and client-centered

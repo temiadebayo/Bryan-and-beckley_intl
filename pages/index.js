@@ -19,12 +19,13 @@ export default function Home() {
   return (
     <motion.div className="">
       <Head>
-        <title>Bryan and Beckley international</title>
+        <title>Bryan and Beckley International </title>
         <meta
           name="description"
           content="Bryan and Beckley international all access"
         />
-        <link rel="icon" href="/favicon.ico" />
+        
+        <link rel="icon" href="/B_B.ico" />
       </Head>
       <NavBar />
       <Hero />
