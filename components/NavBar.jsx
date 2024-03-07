@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import ThemeChanger from './ThemeSwicher';
+import Image from 'next/image';
 // import { useRouter } from 'next/router';
 
 import {
@@ -17,8 +18,8 @@ const NavBar = () => {
     { name: 'Home', link: '/' },
     // { name: 'Product', link: '/contact' },
     // { name: 'Partners', link: '/contact' },
-    { name: 'About', link: '/about' },
-    { name: 'Contact ', link: '/contact' },
+    { name: 'Origin Story', link: '/about' },
+    // { name: 'Contact ', link: '/contact' },
   ];
   // const router = useRouter();
   // const isHomePage = router.pathname === '/';
@@ -46,33 +47,28 @@ const NavBar = () => {
 
   return (
     <div
-      role="navigation" // ARIA
       style={{ backgroundColor: `${color}` }}
       className="fixed left-0 right-0 top-0 w-screen z-10 ease-in duration-300"
     >
       {/* {router.pathname === '/' ? item : ''} */}
-      <div className="md:max-w-[1240px] mx-auto flex justify-between items-center p-4 text-[white] ">
-        <img
-          src="https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702721950/Bryan%20and%20Beckley/icons_website/B_B_ov9riz.png"
-          style={{ color: `${textColor}` }}
-          alt="Bryan and beckley's logo"
-          className="text-2xl font-bold sm:text-2xl w-[50px] h-[50px] cursor-pointer "
+      <div className="max-w-[1240px] mx-auto flex justify-between items-center p-4 text-[white] ">
+        <Image
+          src="/images/BB.svg"
+          // style={{ color: `${textColor}` }}
+          alt="Bryan and beckley logo"
+          height={53}
+          width={150}
         />
 
-        <div>
-          <ul
-            role="navigation"
-            className="hidden sm:flex "
-            style={{ color: `${textColor}` }}
-          >
+        <div role="navigation">
+          <ul className="hidden sm:flex " style={{ color: `${textColor}` }}>
             {navigation.map((item, index) => (
               <li
                 key={index}
-                className=" px-2 hover:border-b-4  cursor-pointer focus:outline-none text-xl"
+                tabIndex="0"
+                className="  p-4 hover:border-t-2 hover:border-t-[#cb754a] hover:text-[#cb754a] cursor-pointer focus:outline-none text-xl "
               >
-                <Link href={item.link}>
-                  <a>{item.name}</a>
-                </Link>
+                <Link href={item.link}>{item.name}</Link>
               </li>
             ))}
             {/* {isHomePage && (
@@ -83,28 +79,36 @@ const NavBar = () => {
           </ul>
         </div>
 
-        <div style={{ color: `${textColor}` }} className="hidden md:flex  ">
-          {/* <Link
-            href={
-              'https://www.linkedin.com/company/bryan-and-beckley-international/'
-            }
-          >
-            <AiOutlineLinkedin
-              color="#0077b5"
-              size={24}
-              className=" items-center cursor-pointer "
-            />
-          </Link> */}
-          <Link href={'/quote'} passHref>
+        <div
+          style={{ color: `${textColor}` }}
+          className="hidden md:flex md:flex-row-1 md:px-4 md:space-x-2 md:justify-center"
+        >
+          <div className="flex justify-center items-center">
+            <Link
+              passHref
+              href={
+                'https://www.linkedin.com/company/bryan-and-beckley-international/'
+              }
+            >
+              <AiOutlineLinkedin
+                // color="#000700"
+                size={35}
+                className=" items-center cursor-pointer hover:drop-shadow-2xl hover:size-4"
+              />
+            </Link>
+          </div>
+          <Link href={'/contact'} passHref>
             <button
               style={{ color: `${textColor}` }}
-              className="px-4 py-2 border-2 border-[#620D66]  rounded-md  hover:bg-[#620D66]"
+              className="px-4 py-2 border-2 border-[#cb754a]  rounded-md  hover:bg-[#cb754a]"
             >
-              Request a quote
+              Contact Us
             </button>
           </Link>
         </div>
-        <ThemeChanger />
+        <div>
+          <ThemeChanger />
+        </div>
         {/* z-10 to display on top of the overlay */}
         <div
           onClick={handleClick}
@@ -135,15 +139,29 @@ const NavBar = () => {
               <AiOutlineInstagram size={30} color="#C13584" />
               <AiOutlineFacebook size={30} color=" #3B5998" />
             </div> */}
-            <div onClick={handleClick}>
-              <Link href={'/quote'} passHref>
+            <div className="items-center flex justify-center p-4">
+              <Link
+                passHref
+                href={
+                  'https://www.linkedin.com/company/bryan-and-beckley-international/'
+                }
+              >
+                <AiOutlineLinkedin
+                  // color="#000700"
+                  size={35}
+                  className=" items-center cursor-pointer hover:shadow-2xl"
+                />
+              </Link>
+            </div>
+            <div onClick={handleClick} className="p-4">
+              <Link href={'/contact'} passHref>
                 <button
                   // onClick={handleClick}
 
-                  className="px-8 py-3 text-[white] border border-[white]
+                  className="px-6 py-3 text-[white] border border-[white]
     hover:bg-transparent bg-[#620D66] rounded hover:rounded-full hover:drop-shadow-lg"
                 >
-                  Request a quote
+                  Contact Us
                 </button>
               </Link>
             </div>

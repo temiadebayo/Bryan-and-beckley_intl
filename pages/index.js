@@ -22,7 +22,7 @@ export default function Home() {
         <title>Bryan and Beckley International </title>
         <meta
           name="description"
-          content="Bryan and Beckley international all access"
+          content="Bryan and Beckley international Limited"
         />
         
         <link rel="icon" href="/B_B.ico" />

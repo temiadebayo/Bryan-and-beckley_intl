@@ -7,6 +7,7 @@ const nextConfig = {
     remotePatterns: [
       {
         hostname: 'res.cloudinary.com',
+        hostname: 'drive.google.com',
       },
     ],
   },

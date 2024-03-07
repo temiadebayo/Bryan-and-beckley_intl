@@ -1,58 +1,71 @@
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Logo = () => {
   const logoList = [
     {
-      name: 'Commscope Logo',
-      link: 'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702822898/Bryan%20and%20Beckley/Vendors%20LOGO/Commscope_logo_z12gsi.png',
-      href: 'https://www.commscope.com/',
+      name: 'Rittal logo',
+      link: '/images/rittal_gy.svg',
+      href: 'https://www.rittal.com/com-en/',
+      height: '250',
+      width: '200',
     },
 
     {
       name: 'Austin Hughes logo',
-      link: 'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702551818/Bryan%20and%20Beckley/Vendors%20LOGO/Austin_Hughes_dwndag.svg',
+      link: '/images/austin_gy.svg',
       href: 'https://www.austin-hughes.com/',
+      height: '200',
+      width: '250',
     },
 
     {
-      name: 'Rittal logo',
-      link: 'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702551817/Bryan%20and%20Beckley/Vendors%20LOGO/Rittal_fc6ehy.svg',
-      href: 'https://www.rittal.com/com-en/',
+      name: 'Commscope Logo',
+      link: '/images/commscope_gy.svg',
+      href: 'https://www.commscope.com/',
+      height: '200',
+      width: '300',
     },
 
     {
       name: 'Ruckus logo',
-      link: 'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702822887/Bryan%20and%20Beckley/Vendors%20LOGO/Ruckus_Logo_janfrk.png',
+      link: '/images/Ruckus_gy.svg',
       href: '#',
+      height: '200',
+      width: '300',
     },
 
     {
-      name: ' C&D logo',
-      link: 'https://res.cloudinary.com/dzcwvkzmy/image/upload/v1702551818/Bryan%20and%20Beckley/Vendors%20LOGO/C_D_xn6lfg.svg',
+      name: ' C&D technology logo',
+      link: '/images/C&D_gy.svg',
       href: 'https://www.cdtechno.com/',
+      height: '200',
+      width: '300',
     },
   ];
 
   return (
     <section className="py-28">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+      <div className="max-w-screen mx-auto ">
         <h3 className="font-semibold  dark:text-gray-300 text-sm sm:text-xl text-center">
           TRUSTED BY VENDORS FROM AROUND THE WORLD
         </h3>
-        <div className="mt-6">
-          <ul className=" flex flex-col sm:flex-row gap-y-8 sm:gap-x-6  items-center justify-center  lg:divide-x ">
+        <div className="mt-6 ">
+          <ul className=" flex flex-col sm:flex-row gap-y-8 sm:gap-x-6  items-center justify-center sm:divide-x-0 divide-y-0 sm:divide-solid ">
             {logoList.map((item, index) => (
-              <li key={index} className="lg:px-6 sm:p-2 gap-4">
-                <a href={item.href}>
-                  <img
+              <li key={index} className="px-4">
+                <Link passHref href={item.href}>
+                  <Image
                     src={item.link}
                     alt={item.name}
-                    loading="eager"
-                    className="sm:h-[100px] sm:w-[200px] lg:w-[350px] lg:h-24 cursor-pointer"
+                    width={item.width}
+                    height={item.height}
+                    loading="lazy"
+                    className=""
                   />
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

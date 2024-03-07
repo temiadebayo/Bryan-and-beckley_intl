@@ -1,25 +1,30 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { allDocs } from '../.contentlayer/generated';
+import Image from 'next/image';
 import Logo from './Logo';
+
 import { FaTruckPlane } from 'react-icons/fa6';
 
 const Features = () => {
   const [color, setColor] = useState('transparent');
   const [textColor, setTextColor] = useState('white');
   return (
-    <div className="h-auto pb-4">
+    <div className="h-auto pb-4 w-full mx-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2  gap-4">
         {allDocs.map((item, index) => (
           <Link key={index} href={item.url_path} passHref>
-            <div className="  rounded-xl border hover:drop-shadow-2xl border-gray-100 p-4 group block mx-auto  ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 cursor-pointer hover:text-white ">
+            <div
+              tabIndex="0"
+              className=" rounded-xl border hover:drop-shadow-2xl border-gray-100 p-4 group block mx-auto  ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 cursor-pointer hover:text-white "
+            >
               <span className="inline-block hover:drop-shadow-2xl rounded-lg p-3">
-                <div className="inline-flex align-middle hover:drop-shadow-2xl justify-center items-center select-none  ">
-                  <img src={item.icon} className="h-[60px] w-[60px]  " />
-                </div>
+                {/* <div className="inline-flex align-middle hover:drop-shadow-4xl justify-center items-center select-none  ">
+                 <img width={50} height={60} alt='/' src={item.icon}/>
+                </div> */}
               </span>
 
-              <h2 className="py-2 font-semibold text-base sm:text-lg ">
+              <h2 className="py-2 font-semibold text-base sm:text-2xl ">
                 {item.title}
               </h2>
               <p className="sm:mt-1 block text-sm sm:text-base dark:group-hover:text-white group-hover:text-inidigo-600 py-1 px-4">

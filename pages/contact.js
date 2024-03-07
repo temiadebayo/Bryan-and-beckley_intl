@@ -44,7 +44,7 @@ const contact = () => {
           />
         </svg>
       ),
-      contact: '+234(0) ',
+      contact: '',
       title: 'Phone',
     },
     {

@@ -9,5 +9,8 @@
     html,
     body {
       @apply dark:bg-trueGray-800;
+
+
+
     }
 }

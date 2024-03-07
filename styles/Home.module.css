@@ -1,5 +1,5 @@
 .ord{
-  overflow-x: auto;
+  /* overflow-x: auto; */
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: 1rem;
