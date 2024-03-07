@@ -20,9 +20,21 @@ module.exports = {
       '2xl': '1536px',
       //=> @media (min-width : 1536px) {...}
     },
-   
+
     extend: {
       colors: {
+        'blue-gray': {
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b', // Add this line
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
+        },
         trueGray: colors.neutral,
       },
       width: {
@@ -33,5 +45,6 @@ module.exports = {
       },
     },
   },
+
   plugins: [],
 };

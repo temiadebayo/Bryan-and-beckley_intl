@@ -38,7 +38,7 @@ export default function Home() {
   }, [controls, inView]);
 
   return (
-    <motion.div className="">
+    <motion.div className="cursor-default">
       <section className="relative  ">
         <video
           // playsInline={true}

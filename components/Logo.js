@@ -49,7 +49,7 @@ const Logo = () => {
   return (
     <section className="py-28">
       <div className="max-w-screen mx-auto ">
-        <h3 className="font-semibold  dark:text-gray-300 text-sm sm:text-xl text-center">
+        <h3 className="font-semibold  sm:text-2xl text-center">
           TRUSTED BY VENDORS FROM AROUND THE WORLD
         </h3>
         <div className="mt-6 ">
