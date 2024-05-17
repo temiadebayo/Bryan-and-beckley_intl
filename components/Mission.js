@@ -7,7 +7,7 @@ const Mission = () => {
       <div className="max-w-screen-xl mx-auto md:px-8">
         <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
           <div className="flex-1 sm:hidden lg:block">
-            <img
+            <Image
               src="/images/valueprop.png"
               className="md:max-w-lg sm:rounded-lg "
               style={{ maxWidth :'100%', height :'auto' ,}}

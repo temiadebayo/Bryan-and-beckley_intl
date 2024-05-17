@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { allDocs } from '../../.contentlayer/generated';
+import Image from 'next/image';
 
 const Index = () => {
   const router = useRouter();
@@ -20,7 +21,8 @@ const Index = () => {
         <p className=" lg:text-md text-[14px]  min-w-full">
           {blogposts?.desc}
         </p>
-        <img
+        <Image
+          alt='blog image'
           src={blogposts?.images}
           className="sm:min-w-[500px] w-auto h-auto rounded-md py-6 "
         />
