@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { CldUploadWidget } from 'next-cloudinary';
+// import { CldUploadWidget } from 'next-cloudinary';
 
 
 const GenerateQuote = () => {
@@ -61,7 +61,7 @@ const GenerateQuote = () => {
               ></textarea>
             </div>
             <div>
-            <CldUploadWidget uploadPreset="uo4hzsam">
+            {/* <CldUploadWidget uploadPreset="uo4hzsam">
           {({ open }) => {
             return (
               <button onClick={() => open()} className="w-full px-4 py-2  font-medium  hover:border-gray-700 border-2 border-[#A4A9CE] active:border-gray-900 rounded-lg duration-150">
@@ -69,7 +69,7 @@ const GenerateQuote = () => {
               </button>
             );
           }}
-        </CldUploadWidget>
+        </CldUploadWidget> */}
             </div>
             <button className="w-full px-4 py-2 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-lg duration-150">
               Submit
